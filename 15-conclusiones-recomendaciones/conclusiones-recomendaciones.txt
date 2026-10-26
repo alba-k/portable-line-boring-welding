@@ -1,0 +1,14 @@
+\section{Conclusiones y recomendaciones}
+
+\subsection{Conclusiones}
+\begin{enumerate}
+    \item El diagnóstico del mantenimiento actual de los alojamientos de pasadores demostró que el recargue manual es la principal causa de las deficiencias técnicas: la dependencia del pulso del operario genera un aporte térmico variable, un espesor de recargue no uniforme y pérdida de repetibilidad dimensional. La encuesta aplicada a 8 técnicos soldadores y 6 operadores confirmó además su impacto operativo, ya que la totalidad de los operadores reportó paradas superiores a 24\,horas. La mayoría prefiere un equipo portátil (83,3\,\%), trabaja con diámetros de 30 a 150\,mm (75,0\,\%) y dispone de red de 220\,V (87,5\,\%), con GTAW como proceso predominante (62,5\,\%). A partir de estos resultados y del análisis de las alternativas comerciales (CLIMAX, Sir Meccanica y Maucotools), se establecieron las especificaciones objetivo del diseño: distancia entre centros de 100 a 600\,mm, rellenado continuo de hasta 60\,mm, masa menor a 35\,kg, tiempo de acople menor a 30\,min y avance paramétrico de 1 a 5\,mm/rev. Con ello se cumplió el primer objetivo específico, al fundamentar los requerimientos de diseño de la máquina.
+
+    \item La aplicación del método de los cinco pasos permitió estructurar el diseño conceptual del sistema semiautomatizado. El problema se descompuso en cinco subfunciones (acoplar la pieza, transmitir energía, sujetar la herramienta, transportar el material de soldadura y controlar velocidad y alcance), cuyas alternativas se exploraron de forma sistemática y se depuraron descartando las no viables. Con las opciones restantes se conformaron cuatro modelos integrados que, mediante la matriz de filtrado con el Modelo D como referencia, se redujeron a la continuidad del Modelo B y a la recombinación de los modelos A y D en el Modelo AD. En la evaluación ponderada, el Modelo AD obtuvo 4,05 puntos frente a 3,80 del Modelo B, consolidándose como la alternativa óptima. Esta configuración integra fijación temporal por soldadura, motor AC con correa dentada, brida rígida con pernos axiales, cable-manguera flexible y control mediante PLC con HMI táctil, lo que aporta la precisión y la durabilidad necesarias para controlar la rotación y el avance, y así corregir las desviaciones del aporte térmico planteadas en la problemática. De este modo se cumplió el segundo objetivo específico.
+\end{enumerate}
+
+% PENDIENTE: agregar las conclusiones de los objetivos 3 (CAD), 4 (FEA) y 5 (prototipo y ensayo)
+% cuando se terminen esas secciones.
+
+\subsection{Recomendaciones}
+% PENDIENTE: redactar al final del proyecto.

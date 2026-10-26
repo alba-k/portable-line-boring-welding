@@ -1,0 +1,41 @@
+
+% ----- Agregadas el 26-10-2026 (verificadas en línea ese día) -----
+
+@article{antec-Holmberg2017,
+  author  = {Holmberg, Kenneth and Kivikytö-Reponen, Päivi and Härkisaari, Pirita and Valtonen, Kati and Erdemir, Ali},
+  title   = {Global energy consumption due to friction and wear in the mining industry},
+  journal = {Tribology International},
+  volume  = {115},
+  pages   = {116--139},
+  year    = {2017},
+  doi     = {10.1016/j.triboint.2017.05.010}
+}
+
+@misc{antec-ITA2026,
+  author       = {{International Trade Administration}},
+  title        = {Bolivia -- Equipment and Machinery},
+  howpublished = {Country Commercial Guide, U.S. Department of Commerce},
+  month        = mar,
+  year         = {2026},
+  note         = {Publicado el 25 de marzo de 2026. Datos del INE de Bolivia. Consultado el 26 de octubre de 2026},
+  url          = {https://www.trade.gov/country-commercial-guides/bolivia-equipment-and-machinery}
+}
+
+@misc{antec-SIIP2021,
+  author       = {{Ministerio de Desarrollo Productivo y Economía Plural}},
+  title        = {Importaciones de maquinaria agrícola y sus partes (enero--abril 2021)},
+  howpublished = {Boletín mensual, Sistema Integrado de Información Productiva (SIIP), con datos del INE. El documento firma como VCI},
+  year         = {2021},
+  note         = {Consultado el 26 de octubre de 2026},
+  url          = {https://siip.produccion.gob.bo/noticias/files/2021-81dfe-Importacion-de-maquinaria-agricola-2021.pdf}
+}
+
+@misc{antec-Maucotools2026,
+  author       = {{Maucotools}},
+  title        = {Line boring ovalized excavator bushings: on-site repair},
+  howpublished = {Blog técnico, Maucotools},
+  month        = jul,
+  year         = {2026},
+  note         = {Publicado el 9 de julio de 2026. Consultado el 26 de octubre de 2026},
+  url          = {https://www.maucotools.com/en/blog/line-boring-ovalized-excavator-bushings-on-site}
+}

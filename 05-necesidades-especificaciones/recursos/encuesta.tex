@@ -1,0 +1,229 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{amssymb}
+
+\begin{document}
+
+\begin{center}
+    \Large\textbf{Encuesta de Diagnóstico Técnico y Parámetros de Diseño}\\
+    \vspace{0.2cm}
+    \normalsize\textbf{Proyecto:} Sistema Semiautomatizado para Recargue de Soldadura en Pasadores
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textit{Esta encuesta tiene como objetivo diagnosticar el proceso actual de rellenado/recargue de soldadura en pasadores y definir los parámetros técnicos y de diseño para el desarrollo de un sistema semiautomatizado. Sus respuestas son anónimas.}
+
+\vspace{0.2cm}
+\noindent\textit{\textbf{Instrucciones:} Complete la Sección I y luego diríjase \'unicamente a la sección correspondiente a su cargo, según se indica al final de la Sección I. No es necesario responder las secciones de otros perfiles.}
+\vspace{0.4cm}
+
+% ============================================================
+\section*{I. Información del Encuestado}
+\begin{enumerate}[series=encuesta, label=\textbf{\arabic*.}, leftmargin=*]
+    \item \textbf{Años de experiencia en mantenimiento de maquinaria pesada/agrícola:}
+    \begin{multicols}{2}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item 1 a 3 años
+        \item 4 a 7 años
+        \item 8 a 12 años
+        \item Más de 12 años
+    \end{itemize}
+    \end{multicols}
+
+    \item \textbf{Cargo u ocupación principal:}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Técnico / Mecánico de taller (quien suelda)
+        \item Operador de maquinaria
+    \end{itemize}
+\end{enumerate}
+
+\vspace{0.3cm}
+\begin{center}
+\fbox{\parbox{0.95\linewidth}{
+\centering
+\textbf{Según el cargo marcado en la pregunta 2, continúe en la sección indicada:}\\[0.3cm]
+\begin{tabular}{ll}
+Técnico / Mecánico de taller (quien suelda) & $\rightarrow$ Sección II-A, página \pageref{sec:tecnico}\\
+Operador de maquinaria & $\rightarrow$ Sección II-B, página \pageref{sec:operador}\\
+\end{tabular}\\[0.2cm]
+\textit{No responda las secciones que no correspondan a su cargo.}
+}}
+\end{center}
+
+\newpage
+% ============================================================
+\section*{II-A. Sección Técnica (Técnico / Mecánico de Taller)}
+\label{sec:tecnico}
+\noindent\textit{Responda esta sección únicamente si su cargo es Técnico / Mecánico de taller.}
+\vspace{0.2cm}
+
+\subsection*{Geometría del Pasador}
+\begin{enumerate}[resume=encuesta, leftmargin=*]
+    \item \textbf{Rango de diámetro interior más frecuente a reparar:}
+    \begin{multicols}{2}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Menos de 30 mm
+        \item 30 mm a 60 mm
+        \item 61 mm a 100 mm
+        \item 101 mm a 150 mm
+        \item Más de 150 mm
+    \end{itemize}
+    \end{multicols}
+
+    \item \textbf{Longitud promedio entre ojo y ojo:}
+    \begin{multicols}{2}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Hasta 100 mm
+        \item 101 mm a 200 mm
+        \item 201 mm a 400 mm
+        \item 401 mm a 600 mm
+        \item Más de 600 mm
+    \end{itemize}
+    \end{multicols}
+
+    \item \textbf{Longitud máxima de rellenado continuo requerida:}
+    \begin{multicols}{2}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Hasta 10 mm
+        \item 10.1 mm a 20 mm
+        \item 20.1 mm a 40 mm
+        \item 40.1 mm a 60 mm
+        \item Más de 60 mm
+    \end{itemize}
+    \end{multicols}
+\end{enumerate}
+
+\subsection*{Severidad de Desgaste y Tiempos de Reparación}
+\noindent\textit{Escala unificada en horas: a mayor severidad de desgaste, mayor tiempo de reparación esperado.}
+\begin{enumerate}[resume=encuesta, leftmargin=*]
+    \item \textbf{Tiempo que le toma reparar un pasador según la severidad del desgaste:}
+    \begin{enumerate}[label=\alph*), leftmargin=*]
+        \item \textit{Desgaste Leve (superficial / desgaste mínimo):}
+        \begin{multicols}{3}
+        \begin{itemize}[label=$\square$, leftmargin=*]
+            \item Menos de 2 horas
+            \item 2 a 4 horas
+            \item Más de 4 horas
+        \end{itemize}
+        \end{multicols}
+
+        \item \textit{Desgaste Moderado (surcos / deformaciones medias):}
+        \begin{multicols}{3}
+        \begin{itemize}[label=$\square$, leftmargin=*]
+            \item Más de 4 hasta 8 horas
+            \item Más de 8 hasta 12 horas
+            \item Más de 12 horas
+        \end{itemize}
+        \end{multicols}
+
+        \item \textit{Desgaste Severo (reconstrucción profunda / ovalamiento):}
+        \begin{multicols}{3}
+        \begin{itemize}[label=$\square$, leftmargin=*]
+            \item Más de 12 hasta 24 horas (1 día)
+            \item Más de 24 hasta 48 horas (2 días)
+            \item Más de 48 horas (más de 2 días)
+        \end{itemize}
+        \end{multicols}
+    \end{enumerate}
+
+    \item \textbf{Impacto temporal por re-trabajo (amolado, re-soldadura, mecanizado) según el tipo de defecto:}
+    \begin{enumerate}[label=\alph*), leftmargin=*]
+        \item \textit{Defecto superficial (poro aislado / socavación leve):}
+        \begin{multicols}{3}
+        \begin{itemize}[label=$\square$, leftmargin=*]
+            \item Menos de 30 min
+            \item 30 a 60 min
+            \item Más de 1 hora
+        \end{itemize}
+        \end{multicols}
+
+        \item \textit{Defecto severo (porosidad profunda / falta de fusión interna):}
+        \begin{multicols}{3}
+        \begin{itemize}[label=$\square$, leftmargin=*]
+            \item 1 a 2 horas
+            \item Más de 2 hasta 4 horas
+            \item Más de 4 horas
+        \end{itemize}
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\subsection*{Proceso de Soldadura Actual}
+\begin{enumerate}[resume=encuesta, leftmargin=*]
+    \item \textbf{Proceso de soldadura disponible y de mayor uso en el taller:}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item \textbf{GMAW / MIG-MAG:} Soldadura por alambre continuo sólido con protección de gas.
+        \item \textbf{FCAW / Alambre Tubular:} Soldadura por alambre con núcleo de fundente.
+        \item \textbf{SMAW / Electrodo Revestido:} Soldadura manual por arco eléctrico.
+        \item \textbf{Otro:} Especificar \hrulefill
+    \end{itemize}
+    \textbf{Material de aporte específico utilizado (tipo / clasificación AWS):} \hrulefill
+
+    \item \textbf{Suministro eléctrico predominante en su área de trabajo:}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Monofásico (220V)
+        \item Trifásico (380V)
+        \item Generador portátil en campo
+    \end{itemize}
+
+    \item \textbf{¿Cómo desarrolla actualmente el proceso de rellenado de pasadores? (Técnica manual y preparación):}\\
+    \rule{\linewidth}{0.4pt}\\[0.2cm]
+    \rule{\linewidth}{0.4pt}
+\end{enumerate}
+
+\newpage
+% ============================================================
+\section*{II-B. Sección Operativa (Operador de Maquinaria)}
+\label{sec:operador}
+\noindent\textit{Responda esta sección únicamente si su cargo es Operador de maquinaria.}
+\vspace{0.2cm}
+
+\begin{enumerate}[resume=encuesta, leftmargin=*]
+    \item \textbf{Con qué frecuencia percibe que la máquina que opera sale de servicio por daño en pasadores:}
+    \begin{multicols}{2}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item 1 a 3 veces/mes
+        \item 4 a 8 veces/mes
+        \item 9 a 15 veces/mes
+        \item Más de 15 veces/mes
+    \end{itemize}
+    \end{multicols}
+
+    \item \textbf{Tiempo aproximado que la máquina permanece fuera de servicio (desde su punto de vista como operador) cada vez que se repara un pasador:}
+    \begin{multicols}{2}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Menos de 1 día
+        \item 1 a 2 días
+        \item 3 a 4 días
+        \item Más de 4 días
+    \end{itemize}
+    \end{multicols}
+
+    \item \textbf{Modalidad de operación que preferiría para un equipo de recargue asistido:}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Estacionario (fijo sobre banco/mesa de taller)
+        \item Portátil (transportable para acoplar directamente sobre la máquina en campo)
+        \item Ambas modalidades son indispensables
+    \end{itemize}
+
+    \item \textbf{Si una máquina le asistiera en el proceso de rellenado, ¿cuál sería el mayor beneficio para usted como operador?}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Reduciría mi fatiga física y el riesgo de lesiones
+        \item Me permitiría regresar la máquina a producción más rápido
+        \item Simplificaría el manejo y transporte del equipo en campo
+        \item No creo que haga una gran diferencia
+    \end{itemize}
+
+    \item \textbf{¿Qué tan fácil considera que debería ser acoplar/transportar el equipo hasta la máquina en campo?}
+    \begin{itemize}[label=$\square$, leftmargin=*]
+        \item Debe ser manejable por una sola persona
+        \item Puede requerir dos personas para su traslado
+        \item No es una limitante relevante para mi labor
+    \end{itemize}
+\end{enumerate}
+
+\end{document}

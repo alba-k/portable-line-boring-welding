@@ -1,0 +1,215 @@
+\section{Filtrado de conceptos}
+\label{sec:filtrado}
+
+\subsection{Selección de conceptos para el filtrado}
+
+Tras el análisis individual de cada subfunción y la eliminación de las alternativas no viables, se procedió a la síntesis de soluciones mediante la combinación de las opciones que superaron el primer filtro técnico. Con el objetivo de explorar diferentes enfoques de diseño y evaluar diversos compromisos de ingeniería, tales como rigidez estructural, costo de implementación, facilidad de transporte y nivel de automatización, se estructuraron cuatro modelos conceptuales integrados. Cada modelo combina una solución válida por subfunción, constituyendo la base de alternativas sobre la cual se aplicará la matriz de evaluación y selección final.
+
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de modelos conceptuales integrados para la fase de filtrado}
+    \label{tab:modelos_conceptuales_filtrado}
+    \small
+    \renewcommand{\arraystretch}{1.3}
+
+    \begin{tabularx}{\textwidth}{
+        @{}
+        >{\bfseries\raggedright\arraybackslash}p{3.0cm}
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        \toprule
+
+        Subfunción &
+        \textbf{Modelo A} (Industrial) &
+        \textbf{Modelo B} (Portátil) &
+        \textbf{Modelo C} (Automatizado) &
+        \textbf{Modelo D} (Híbrido) \\
+
+        \midrule
+
+        1. Acoplamiento &
+        Fijación por soldadura &
+        Base magnética de alta fuerza &
+        Base magnética de alta fuerza &
+        Fijación por soldadura \\
+
+        \midrule
+
+        2. Transmisión &
+        Motorreductor trifásico &
+        Motor AC con correa dentada &
+        Motorreductor trifásico &
+        Motor AC con correa dentada \\
+
+        \midrule
+
+        3. Sujeción de herramienta &
+        Brida rígida con centrado de precisión y pernos axiales &
+        Bloque con asiento ranurado &
+        Bloque con asiento ranurado &
+        Cabezal de arrastre con chavetas \\
+
+        \midrule
+
+        4. Transporte de material &
+        Cadena portacables articulada &
+        Cable-manguera flexible (\textit{conduit}) &
+        Alimentador sobre la máquina &
+        Cable-manguera flexible (\textit{conduit}) \\
+
+        \midrule
+
+        5. Control de velocidad &
+        Variador de frecuencia (VFD) &
+        Microcontrolador con encoder &
+        PLC con HMI táctil &
+        PLC con HMI táctil \\
+
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\vspace{0.5cm}
+
+
+\subsubsection*{Modelo A: configuración industrial y de alta rigidez}
+
+\textit{Enfocado en máxima firmeza estructural y capacidad para trabajos pesados.}
+
+Esta alternativa ha sido seleccionada para entornos operacionales exigentes donde las fuerzas de corte y el torque son elevados. La combinación de componentes prioriza la robustez mecánica sobre la velocidad de montaje:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{1. Acoplamiento:} \textit{Fijación temporal por soldadura.} Proporciona la máxima rigidez posible y anula por completo las vibraciones en la base.
+
+    \item \textbf{2. Transmisión:} \textit{Motorreductor eléctrico trifásico.} Entrega alto torque constante a bajas RPM con bajo mantenimiento.
+
+    \item \textbf{3. Sujeción de herramienta:} \textit{Brida rígida con centrado de precisión y pernos axiales.} Maximiza el área de apoyo perpendicular contra fuertes momentos flectores.
+
+    \item \textbf{4. Transporte de material:} \textit{Cadena portacables articulada.} Guía y protege mangueras y cables en desplazamientos lineales continuos.
+
+    \item \textbf{5. Control de velocidad:} \textit{Variador de frecuencia (VFD).} Permite arranques suaves y regulación precisa de velocidad con gran fiabilidad industrial.
+\end{itemize}
+
+\vspace{0.4cm}
+
+
+\subsubsection*{Modelo B: configuración portátil y económica}
+
+\textit{Orientado a un montaje rápido, componentes ligeros y un costo de implementación reducido.}
+
+Diseñado para trabajos de mantenimiento en campo donde el tiempo de instalación y la portabilidad del equipo son críticos:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{1. Acoplamiento:} \textit{Base magnética de alta fuerza.} Permite una fijación rápida y sin necesidad de mecanizados directos sobre la estructura.
+
+    \item \textbf{2. Transmisión:} \textit{Motor AC con correa dentada.} Ofrece un sistema ligero, económico y aísla las vibraciones del motor hacia la herramienta.
+
+    \item \textbf{3. Sujeción de herramienta:} \textit{Bloque con asiento transversal ranurado.} Permite un ajuste y recambio radial rápido con herramientas estándar.
+
+    \item \textbf{4. Transporte de material:} \textit{Cable-manguera flexible integrado (\textit{conduit}).} Solución compacta y liviana para canalizar alambre, gas y corriente en una sola línea.
+
+    \item \textbf{5. Control de velocidad:} \textit{Microcontrolador con encoder y sensores.} Brinda control en lazo cerrado con bajo costo de hardware.
+\end{itemize}
+
+\vspace{0.4cm}
+
+
+\subsubsection*{Modelo C: configuración automatizada y de alta precisión}
+
+\textit{Diseñado para priorizar la estabilidad en el proceso, la repetibilidad y el control digital centralizado.}
+
+Esta opción combina una base de montaje rápida pero rígida con elementos de control avanzados, ideal para operaciones automatizadas:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{1. Acoplamiento:} \textit{Base magnética de alta fuerza.} Garantiza posicionamiento ágil sin modificar la superficie de trabajo.
+
+    \item \textbf{2. Transmisión:} \textit{Motorreductor eléctrico trifásico.} Asegura la potencia y velocidad constantes que exige un ciclo automatizado.
+
+    \item \textbf{3. Sujeción de herramienta:} \textit{Bloque con asiento transversal ranurado.} Ofrece perpendicularidad geométrica precisa al apoyar sobre plano rectificado.
+
+    \item \textbf{4. Transporte de material:} \textit{Alimentador de alambre sobre la máquina.} Reduce la fricción al acortar la distancia del alambre, estabilizando la soldadura.
+
+    \item \textbf{5. Control de velocidad:} \textit{PLC con interfaz HMI táctil.} Permite programar recetas de trabajo, rampas de aceleración y supervisión en tiempo real.
+\end{itemize}
+
+\vspace{0.4cm}
+
+
+\subsubsection*{Modelo D: configuración híbrida versátil con control digital}
+
+\textit{Combina la máxima rigidez en la base con una transmisión que aísla vibraciones y un control digital programable.}
+
+Una alternativa de compromiso que equilibra un anclaje indeformable con una transmisión elástica y un control sofisticado:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{1. Acoplamiento:} \textit{Fijación temporal por soldadura.} Garantiza la máxima seguridad estructural ante vibraciones intensas.
+
+    \item \textbf{2. Transmisión:} \textit{Motor AC con correa dentada.} Permite variaciones sencillas de velocidad mientras amortigua sacudidas torsionales.
+
+    \item \textbf{3. Sujeción de herramienta:} \textit{Cabezal de arrastre con chavetas frontales.} Bloqueo mecánico positivo indeformable ante fuerzas de corte laterales.
+
+    \item \textbf{4. Transporte de material:} \textit{Cable-manguera flexible integrado (\textit{conduit}).} Mantiene el área de trabajo limpia y evita enganches.
+
+    \item \textbf{5. Control de velocidad:} \textit{PLC con interfaz HMI táctil.} Aporta flexibilidad total para adaptar los parámetros de trabajo a distintas geometrías.
+\end{itemize}
+
+\subsection{Matriz de filtrado de conceptos}
+Se toma como referencia el Modelo D (Híbrido), por ser una configuración intermedia entre la rigidez del Modelo A y la ligereza del Modelo B. Cada concepto se compara con la referencia en cada criterio: mejor ($+$), igual ($0$) o peor ($-$).
+\begin{table}[H]
+\centering
+\caption{Matriz de filtrado de conceptos}
+\label{tab:filtrado}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Criterios de selección} & \textbf{A (Industrial)} & \textbf{B (Portátil)} & \textbf{C (Automatizado)} & \textbf{D (Híbrido, ref.)}\\
+\midrule
+Facilidad de manejo        & 0 & $+$ & $-$ & 0  \\
+Precisión del recargue     & $+$ & 0 & $+$ & 0  \\
+Durabilidad                & $+$ & $-$ & $-$ & 0  \\
+Facilidad de manufactura   & $-$ & $+$ & 0 & 0  \\
+Portabilidad               & $-$ & $+$ & 0 & 0  \\
+\midrule
+Suma $+$   & 2 & 3 & 1 & 0  \\
+Suma $0$   & 1 & 1 & 2 & 5  \\
+Suma $-$   & 2 & 1 & 2 & 0  \\
+Evaluación neta & 0 & $+2$ & $-1$ & 0  \\
+\midrule
+\textbf{¿Continuar?} & Combinar con D & Sí & No & Combinar con A \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+El Modelo B obtiene la mejor evaluación neta y continúa a la evaluación. El Modelo C se descarta por su balance negativo. Los modelos A y D empatan con la referencia, pero tienen fortalezas complementarias (rigidez y precisión en A; transmisión y control en D), por lo que se combinan.
+
+\subsection{Recombinación de conceptos}
+Se recombinan los conceptos para reunir las características más destacadas del \textbf{Modelo A (Industrial)} y del \textbf{Modelo D (Híbrido)}, con el propósito de sintetizar una nueva configuración, el \textbf{Modelo AD}. Esta hibridación busca maximizar la firmeza mecánica en los puntos de apoyo y corte, garantizando al mismo tiempo la protección del sistema de transmisión y la flexibilidad del control digital. A continuación, se justifican los componentes seleccionados para esta nueva configuración:
+
+\begin{itemize}[leftmargin=*]
+
+    \item \textbf{1. Acoplamiento de la pieza (Fijación temporal por soldadura):} \textit{Proveniente de los Modelos Industrial e Híbrido.}
+
+    Se selecciona por ser el método que proporciona mayor rigidez estructural y resistencia frente a las vibraciones en la base. 
+
+    \item \textbf{2. Transmisión de energía (Motor AC con transmisión por correa dentada):} \textit{Proveniente del Modelo Híbrido.}
+
+    Se selecciona por su capacidad para reducir la transmisión de vibraciones mecánicas generadas por el motor hacia el eje de la herramienta. 
+
+    \item \textbf{3. Sujeción de herramienta (Brida rígida con pernos axiales):} \textit{Proveniente del Modelo Industrial.}
+
+    Se selecciona por su capacidad para distribuir los esfuerzos generados durante el proceso de mecanizado sobre una superficie de fijación amplia. 
+
+    \item \textbf{4. Transporte de material para soldadura (Cable-manguera flexible integrado / \textit{conduit}):} \textit{Proveniente del Modelo Híbrido.}
+
+    Se adopta por ser una solución compacta y organizada para canalizar simultáneamente el alambre, el gas y la corriente hacia la zona de trabajo. 
+
+    \item \textbf{5. Control de velocidad y alcance (PLC con interfaz HMI táctil):} \textit{Proveniente del Modelo Híbrido.}
+
+    Se selecciona por proporcionar un sistema de control programable y flexible.
+
+\end{itemize}

@@ -1,0 +1,102 @@
+\section{Antecedentes}
+
+\subsection{El desgaste en la maquinaria pesada}
+
+El desgaste por fricción y abrasión es uno de los principales factores de costo en la operación de maquinaria pesada. En la minería, por ejemplo, Holmberg \textit{et al.} estiman que la fricción y el desgaste ocasionan pérdidas de unos 210\,000 millones de euros al año; de ese total, el 27\,\% corresponde a la fabricación de repuestos y equipos de reemplazo y el 26\,\% a trabajos de mantenimiento \cite{antec-Holmberg2017}. Entre los componentes más expuestos se encuentran las articulaciones de pasador y buje, que transmiten cargas elevadas y cíclicas entre el brazo, el balancín y el cucharón \cite{antec-Holmberg2009, antec-Maucotools2026}.
+
+\subsection{El parque de maquinaria en Bolivia y en Santa Cruz}
+
+Bolivia carece de producción nacional de maquinaria y equipos: según los datos del Instituto Nacional de Estadística recopilados por la Administración de Comercio Internacional de los Estados Unidos, la producción nacional fue nula entre 2022 y 2024, y la totalidad del mercado se abasteció mediante importación, principalmente para los sectores agrícola, de construcción y minero \cite{antec-ITA2026}. La Figura~\ref{fig:importaciones} muestra el valor de estas importaciones.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar, bar width=28pt, width=0.7\textwidth, height=6cm,
+            ymin=0, ymax=1700, ylabel={Millones de USD},
+            symbolic x coords={2022,2023,2024}, xtick=data,
+            nodes near coords, nodes near coords align={vertical},
+            every node near coord/.append style={font=\small,
+                /pgf/number format/.cd, use comma, fixed, precision=1, 1000 sep={.}},
+            yticklabel style={/pgf/number format/.cd, 1000 sep={.}},
+            axis x line*=bottom, axis y line*=left,
+            ymajorgrids, grid style={gray!25}, enlarge x limits=0.3]
+            \addplot[fill=gray!60, draw=black!70] coordinates {(2022,1429.3) (2023,1441.9) (2024,1278.8)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Importaciones de maquinaria y equipos de Bolivia, 2022--2024. Fuente: Elaboración propia con datos de \cite{antec-ITA2026}.}
+    \label{fig:importaciones}
+\end{figure}
+
+El departamento de Santa Cruz concentra la mayor parte de esta demanda: entre enero y abril de 2021 recibió el 55\,\% de las importaciones nacionales de maquinaria agrícola y sus partes, frente al 21\,\% de La Paz y el 19\,\% de Cochabamba \cite{antec-SIIP2021}. En consecuencia, cuando un componente estructural de estos equipos se desgasta, su sustitución conlleva costos de importación y plazos de reposición elevados. El propio Estado reconoce esta condición, ya que estableció incentivos tributarios a la importación de bienes de capital mediante la Ley N.\textdegree{}~1391 y su reglamento, el Decreto Supremo N.\textdegree{}~4579 \cite{antec-Ley1391-2021, antec-DS4579-2021}.
+
+\subsection{Ovalización de los alojamientos de pasadores}
+
+En las articulaciones más cargadas (unión balancín-cucharón, biela y pie de pluma), una lubricación deficiente o contaminada incrementa la fricción entre el pasador y el buje; la holgura crece y las cargas pasan a ser de impacto. Cuando el buje se desplaza en su asiento, desgasta el material base del brazo, que suele ser más blando que el propio buje, y el alojamiento pierde su forma cilíndrica: el diámetro en la dirección de la carga crece más que en la dirección perpendicular \cite{antec-Maucotools2026}. Este fenómeno, denominado ovalización, se observa en la Figura~\ref{fig:alojamiento-ovalado}. Si en un alojamiento ovalizado se monta un buje nuevo sin recuperar antes la geometría del asiento, la holgura reaparece al cabo de algunos cientos de horas de trabajo \cite{antec-Maucotools2026}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{02-antecedentes/recursos/alojamiento-ovalado-1.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{02-antecedentes/recursos/alojamiento-ovalado-2.png}
+    \end{subfigure}
+    \caption{Alojamiento de pasador ovalizado en un taller de mantenimiento de Santa Cruz. Fuente: Elaboración propia.}
+    \label{fig:alojamiento-ovalado}
+\end{figure}
+
+En el medio local, este desgaste detiene la maquinaria durante períodos prolongados. En la encuesta realizada para este trabajo, la totalidad de los operadores consultados reportó paradas superiores a 24 horas por desgaste en las uniones de pasador, y los técnicos estimaron entre uno y dos días de taller para reparar un desgaste severo (Sección~5, Figura~\ref{fig:enc-paradas}).
+
+\subsection{Reparación por recargue y mandrinado}
+
+La alternativa a la sustitución del componente es recuperar la geometría del alojamiento: se mandrina el asiento para limpiarlo, se deposita material de aporte mediante recargue de soldadura (\textit{weld overlay}) y se vuelve a mandrinar hasta la cota nominal \cite{antec-Lincoln-Hardfacing}. En la industria internacional, estas operaciones se ejecutan in situ con equipos portátiles que se montan sobre la propia articulación y realizan tanto el mandrinado como el recargue automático, sin desmontar el brazo de la máquina \cite{antec-Maucotools2026, busqext-US6295707}. La Figura~\ref{fig:equipo-portatil} muestra un equipo de este tipo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{02-antecedentes/recursos/patente-US6295707-fig1.png}
+    \caption{Máquina portátil de mandrinado y recargue por soldadura montada sobre el alojamiento. Fuente: Patente US 6\,295\,707 B1 \cite{busqext-US6295707}.}
+    \label{fig:equipo-portatil}
+\end{figure}
+
+En los talleres de Santa Cruz, en cambio, el recargue se realiza de forma manual. La Figura~\ref{fig:reconstruccion-manual} muestra las tres etapas de este proceso tal como se ejecuta actualmente.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{02-antecedentes/recursos/recargue-manual-1.png}
+        \caption{Preparación del alojamiento}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{02-antecedentes/recursos/recargue-manual-2.png}
+        \caption{Recargue de soldadura manual}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{02-antecedentes/recursos/recargue-manual-3.png}
+        \caption{Mandrinado posterior al recargue}
+    \end{subfigure}
+    \caption{Proceso de recargue manual de un alojamiento de pasador. Fuente: \cite{antec-SoldadurasSAM2025}.}
+    \label{fig:reconstruccion-manual}
+\end{figure}
+
+% POR CONFIRMAR: si la D14 cubre también la reparación (cláusula de alcance). Si no, dejar "referencia de calidad".
+Como referencia de calidad para este tipo de uniones, la norma AWS D14.0/D14.0M:2024 \cite{busqext-AWSD14.0-2024}, que reemplazó a la AWS D14.3/D14.3M:2019 \cite{intro-AWSD14.3-2019}, establece los requisitos de soldadura para equipos de movimiento de tierra, construcción y agrícolas, sometidos a cargas dinámicas como las descritas.
+
+\subsection{Limitaciones del recargue manual}
+
+La principal limitación del recargue manual reside en el control del aporte térmico. La energía que el arco entrega por unidad de longitud de cordón se expresa como
+\begin{equation}
+    HI = \eta \, \frac{V \, I}{v}
+    \label{eq:aporte-termico}
+\end{equation}
+donde $HI$ es el aporte térmico (J/mm), $\eta$ la eficiencia del arco (adimensional), $V$ la tensión del arco (V), $I$ la corriente (A) y $v$ la velocidad de avance (mm/s) \cite{antec-Kou2020}. En la soldadura manual, la tensión varía con la longitud del arco y la velocidad de avance depende de la destreza del soldador; ambas fluctúan a lo largo de la pasada \cite{antec-Lancaster1986}. De acuerdo con la Ecuación~\eqref{eq:aporte-termico}, el aporte térmico varía con ellas, y el espesor del recargue deja de ser uniforme a lo largo del barreno.
+
+Un aporte térmico irregular produce además falta de fusión entre pasadas y porosidad, altera la microestructura de la zona afectada por el calor (ZAC) y distorsiona la pieza \cite{antec-Kou2020}. Estos defectos actúan como concentradores de esfuerzo y reducen la vida a fatiga del alojamiento reconstruido \cite{antec-Schijve2009}. En síntesis, el recargue constituye la alternativa técnica y económicamente viable en el medio local, pero su resultado depende de la habilidad del operario. Esta limitación da origen a la problemática planteada en la siguiente sección.

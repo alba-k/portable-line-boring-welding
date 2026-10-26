@@ -1,0 +1,173 @@
+\section{Exploración sistemática}
+\label{sec:exploracion}
+\subsection{Árbol de clasificación de conceptos}
+A continuación se analizan las soluciones descartadas (resaltadas en rojo en los diagramas) para cada subfunción del sistema. En cada caso se incluye el diagrama, el objetivo buscado y la justificación técnica del descarte.
+
+\subsubsection{Acoplar la pieza con la máquina}
+
+\textit{Objetivo: lograr una unión rígida entre el equipo y el alojamiento desgastado, evitando vibraciones.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{09-exploracion-sistematica/recursos/subfuncion1.png}
+    \caption{Árbol de clasificación de la subfunción «acoplar la pieza con la máquina»; en rojo, las alternativas descartadas. Fuente: Elaboración propia.}
+\end{figure}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Mandril hidráulico expansible:} Aunque ofrece excelente concentricidad y rigidez, se descarta por representar un costo económico considerablemente mayor que no se justifica frente a alternativas más sencillas.
+
+    \item \textbf{Cadena o correa de tensado:} Se descarta debido a que proporciona menor rigidez estructural, lo que no garantiza la estabilidad ni elimina las vibraciones ante cargas de trabajo.
+
+    \item \textbf{Pegamento epóxico estructural:} Se descarta porque, a pesar de evitar elementos mecánicos, no permite un montaje y desmontaje rápido y práctico en tareas de mantenimiento.
+
+    \item \textbf{Brida de sujeción con pernos:} Se descarta ya que requiere perforar o disponer de superficies planas específicas para atornillar en el alojamiento, restando versatilidad al proceso.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsubsection{Transformación y transmisión de energía}
+
+\textit{Objetivo: convertir energía eléctrica en rotación y transmitirla a los mecanismos de movimiento.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{09-exploracion-sistematica/recursos/subfuncion2.png}
+    \caption{Árbol de clasificación de la subfunción «transformación y transmisión de energía»; en rojo, las alternativas descartadas. Fuente: Elaboración propia.}
+\end{figure}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Servomotor con reductor planetario:} Se descarta principalmente por su elevado costo económico, superando el presupuesto requerido para las necesidades del sistema.
+
+    \item \textbf{Motor paso a paso con tornillo sin fin:} Se descarta porque entrega un torque limitado que resulta insuficiente para soportar cortes pesados durante el mecanizado.
+
+    \item \textbf{Pedales accionados por el operador:} Se descarta ya que depende del esfuerzo muscular humano, lo cual genera velocidad e intensidad inestables y no cumple con el uso de energía eléctrica.
+
+    \item \textbf{Motor de combustión interna con cadena:} Se descarta debido a que no utiliza energía eléctrica (requiere combustible) y genera emisiones indeseadas junto con vibraciones en espacios cerrados.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsubsection{Sujeción de herramienta}
+
+\textit{Objetivo: resistir el torque y el momento flector inducido por las fuerzas de corte radiales.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{09-exploracion-sistematica/recursos/subfuncion3.png}
+    \caption{Árbol de clasificación de la subfunción «sujeción de herramienta»; en rojo, las alternativas descartadas. Fuente: Elaboración propia.}
+\end{figure}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Portapinzas de alta rigidez (mandril hidráulico o de fresado):} Se descarta por su elevado costo y complejidad de implementación en comparación con mecanismos más directos para montaje perpendicular.
+
+    \item \textbf{Portabrocas convencional de tres mordazas (tipo Jacobs):} Se descarta debido a que carece de la rigidez y la sujeción mecánica positiva necesarias para evitar deslizamientos ante altos momentos flectores.
+
+    \item \textbf{Acoplamiento elástico de garras (quijada o estrella):} Se descarta ya que el elastómero central introduce flexibilidad torsional, comprometiendo la rigidez estricta ante las fuerzas de corte.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsubsection{Transportar material para soldadura}
+
+\textit{Objetivo: canalizar alambre, gas y corriente desde fuentes externas hasta la zona de trabajo.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{09-exploracion-sistematica/recursos/subfuncion4.png}
+    \caption{Árbol de clasificación de la subfunción «transportar material para soldadura»; en rojo, las alternativas descartadas. Fuente: Elaboración propia.}
+\end{figure}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Mangueras independientes con soporte de resorte:} Se descarta porque al mantener las mangueras separadas aumenta el riesgo de enredos y no ofrece un guiado compacto e integrado.
+
+    \item \textbf{Operario llevando el alambre a mano:} Se descarta al ser un proceso manual propenso a inconsistencias en la alimentación de alambre y presentar riesgos de seguridad para el operador.
+
+    \item \textbf{Transporte neumático del alambre por aire comprimido:} Se descarta por su alta complejidad e ineficiencia para regular la velocidad del alambre, pudiendo además alterar la protección de gas.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsubsection{Controlar velocidad y alcance}
+
+\textit{Objetivo: regular las RPM y los límites físicos del avance lineal según los parámetros requeridos.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{09-exploracion-sistematica/recursos/subfuncion5.png}
+    \caption{Árbol de clasificación de la subfunción «controlar velocidad y alcance»; en rojo, las alternativas descartadas. Fuente: Elaboración propia.}
+\end{figure}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Finales de carrera mecánicos y potenciómetro:} Se descarta porque ofrece una regulación poco precisa y los componentes sufren desgaste mecánico, limitando un control fino.
+
+    \item \textbf{Control por comandos de voz sin retroalimentación:} Se descarta debido a su inviabilidad en entornos industriales ruidosos y a la ausencia de sensores para asegurar un control preciso.
+
+    \item \textbf{Control por estimación visual del operador:} Se descarta ya que depende del criterio subjetivo y tiempo de reacción humano, imposibilitando la precisión y repetibilidad en los límites y velocidad.
+\end{itemize}
+
+
+
+\subsection{Tabla de combinación de conceptos}
+La Tabla~\ref{tab:opciones_viables_traspuesta} reúne las opciones que superaron el descarte en cada subfunción; con ellas se arman los conceptos integrados de la Sección~\ref{sec:filtrado}.
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de opciones viables que pasaron la selección por subfunción}
+    \label{tab:opciones_viables_traspuesta}
+    \small
+    \renewcommand{\arraystretch}{1.3}
+
+    \begin{tabularx}{\textwidth}{
+        @{}
+        >{\bfseries\raggedright\arraybackslash}p{2.2cm}
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        @{}
+    }
+        \toprule
+
+        Subfunción &
+        1. Acoplar la pieza &
+        2. Transmisión de energía &
+        3. Sujeción de herramienta &
+        4. Transportar material &
+        5. Controlar velocidad \\
+
+        \midrule
+
+        Opciones viables &
+        \begin{itemize}[leftmargin=*, nosep]
+            \item Base magnética de alta fuerza
+            \item Fijación temporal por soldadura
+        \end{itemize}
+        &
+        \begin{itemize}[leftmargin=*, nosep]
+            \item Motorreductor eléctrico trifásico
+            \item Motor AC con correa dentada
+        \end{itemize}
+        &
+        \begin{itemize}[leftmargin=*, nosep]
+            \item Bloque con asiento ranurado
+            \item Cabezal de arrastre con chavetas
+            \item Brida rígida con centrado de precisión y pernos axiales
+        \end{itemize}
+        &
+        \begin{itemize}[leftmargin=*, nosep]
+            \item Cable-manguera flexible (\textit{conduit})
+            \item Alimentador sobre máquina
+            \item Cadena portacables
+        \end{itemize}
+        &
+        \begin{itemize}[leftmargin=*, nosep]
+            \item PLC con HMI táctil
+            \item Variador de frecuencia (VFD)
+            \item Microcontrolador con encoder
+        \end{itemize}
+        \\
+
+        \bottomrule
+    \end{tabularx}
+\end{table}

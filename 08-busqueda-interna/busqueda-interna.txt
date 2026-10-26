@@ -1,0 +1,121 @@
+\section{Búsqueda interna de soluciones}
+
+A continuación se proponen alternativas para cada subfunción. El descarte de las que no son viables, con su justificación, se presenta en la exploración sistemática (Sección~\ref{sec:exploracion}).
+
+\subsection{Acoplar la pieza con la máquina}
+\textit{Objetivo: lograr una unión rígida entre el equipo y el alojamiento desgastado, evitando vibraciones.}
+\begin{itemize}
+  \item \textbf{S1.1 Brida de sujeción con pernos.} Una brida atornillada a las caras del alojamiento fija el equipo con alta rigidez. Es económica, robusta y de montaje sencillo.
+  \begin{center}
+     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-1.jpeg}
+\end{center}
+\item \textbf{S1.2 Base magnética de alta fuerza.} Un electroimán fija la máquina sobre superficies ferrosas sin perforar. Permite posicionamiento rápido, pero su rigidez depende de la superficie y el espesor del material.
+
+  \begin{center}
+     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-2.jpeg}
+\end{center}
+\item \textbf{S1.3 Pegamento epóxico estructural.} Se adhiere el equipo a la pieza con resina de alta resistencia. Evita elementos de fijación mecánicos.
+
+  \begin{center}
+     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-3.jpeg}
+\end{center}
+\item \textbf{S1.4 Cadena o correa de tensado.} Una cadena tensada alrededor de la pieza se adapta a distintas geometrías. Es rápida de instalar y portátil, aunque algo menos rígida.
+
+  \begin{center}
+     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-4.jpeg}
+\end{center}
+\item \textbf{S1.5 Fijación temporal por soldadura.} Se une el soporte de la máquina directamente a la pieza mediante puntos de soldadura. Proporciona máxima rigidez y seguridad frente a vibraciones.
+
+  \begin{center}
+     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-5.jpeg}
+\end{center}
+\item \textbf{S1.6 Mandril hidráulico expansible.} Se ancla al diámetro interior del alojamiento y centra el equipo. Da excelente concentricidad y rigidez, con mayor costo.
+
+  \begin{center}
+     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-6.jpeg}
+\end{center}
+\end{itemize}
+
+\subsection{Transformación y transmisión de energía}
+\textit{Objetivo: convertir energía eléctrica en rotación y transmitirla a los mecanismos de movimiento.}
+\begin{itemize}
+  \item \textbf{S2.1 Motor de combustión interna con cadena.} Genera alto torque sin depender de la red eléctrica y sería portátil.
+  \item \textbf{S2.2 Motorreductor eléctrico trifásico.} Ofrece alto torque a bajas RPM, ideal para mandrilado. Es robusto, eficiente y de mantenimiento reducido.
+  \item \textbf{S2.3 Motor paso a paso con tornillo sin fin.} Entrega movimiento controlado y autobloqueo en el avance. Es económico, pero con torque limitado para cortes pesados.
+  \item \textbf{S2.4 Pedales accionados por el operador.} Transforman energía muscular en rotación mediante bielas y piñones, eliminando el consumo eléctrico.
+  \item \textbf{S2.5 Servomotor con reductor planetario.} Proporciona control preciso de posición y velocidad con buena relación torque/tamaño. Su costo es mayor, pero facilita automatizar el avance.
+  \item \textbf{S2.6 Motor AC con transmisión por correa dentada.} Permite variar la velocidad fácilmente y aísla las vibraciones del motor. Es sencillo, aunque la correa limita el torque máximo.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{08-busqueda-interna/recursos/solucion-s2.jpeg}
+    \caption{Alternativas para la transformación y transmisión de energía. Fuente: Elaboración propia.}
+    \label{fig:soluciones-s2}
+\end{figure}
+
+\subsection{Sujeción de herramienta}
+\textit{Objetivo: resistir el torque y el momento flector inducido por las fuerzas de corte radiales.}
+
+En aplicaciones donde la herramienta opera de forma perpendicular al eje de rotación, la fijación mecánica debe resistir tanto el torque transmitido como el momento flector inducido por las fuerzas de corte radiales. A continuación se presentan las alternativas conceptuales con sus fortalezas técnicas:
+
+\begin{itemize}
+    \item \textbf{S3.1 Acoplamiento elástico de garras (tipo quijada o estrella):}
+    Destaca por su capacidad inherente para absorber impactos dinámicos y disipar vibraciones operativas mediante su elastómero central, protegiendo el tren de transmisión de sobrecargas torsionales puntuales.
+
+    \item \textbf{S3.2 Bloque con asiento transversal ranurado y tornillos de bloqueo:}
+    Garantiza la perpendicularidad geométrica al apoyar la herramienta directamente sobre un fondo plano rectificado a $90^\circ$, facilitando además el ajuste y recambio de la posición radial de forma rápida.
+
+    \item \textbf{S3.3 Portabrocas convencional de tres mordazas (tipo mandril Jacobs):}
+    Ofrece una versatilidad notable al adaptarse ágilmente a vástagos de diámetros variables mediante una única llave de apriete manual, prescindiendo de mecanizados específicos en la herramienta.
+
+    \item \textbf{S3.4 Cabezal de arrastre con asiento plano ancho y chavetas frontales:}
+    Maximiza la superficie de apoyo perpendicular para contrarrestar con rigidez extrema los momentos flectores, transmitiendo los esfuerzos cortantes a través de un bloqueo mecánico positivo indeformable.
+
+    \item \textbf{S3.5 Brida rígida con centrado de precisión y pernos axiales:} 
+    Distribuye los esfuerzos laterales de flexión a lo largo de un perímetro amplio y atornillado, garantizando una elevada resistencia estructural y una alineación repetible ante cargas dinámicas continuas.
+
+    \item \textbf{S3.6 Portapinzas de alta rigidez (mandril hidráulico o de fresado pesado):}
+    Ofrece una concentricidad micrométrica sobresaliente y una fuerza de amarre radial continua en $360^\circ$, contribuyendo a mitigar microvibraciones durante el contacto rotativo.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{08-busqueda-interna/recursos/solucion-s3.jpeg}
+    \caption{Alternativas para la sujeción de herramienta. Fuente: Elaboración propia.}
+    \label{fig:soluciones-s3}
+\end{figure}
+\subsection{Transportar material para soldadura}
+\textit{Objetivo: canalizar alambre y gas desde fuentes externas hasta la zona de trabajo.}
+\begin{itemize}
+  \item \textbf{S4.1 Transporte neumático del alambre por aire comprimido.} Impulsaría el alambre por tubería usando aire.
+  \item \textbf{S4.2 Cable-manguera flexible integrado (\textit{conduit}).} Un solo conducto lleva alambre, gas y corriente hasta la antorcha. Es el estándar industrial, compacto y fiable.
+  \item \textbf{S4.3 Alimentador de alambre sobre la máquina.} Acerca el motor de arrastre a la antorcha, reduciendo la fricción en el alambre y mejorando la estabilidad de alimentación.
+  \item \textbf{S4.4 Operario llevando el alambre a mano.} Un auxiliar introduce el alambre manualmente durante la soldadura.
+  \item \textbf{S4.5 Cadena portacables articulada.} Guía mangueras y cables acompañando el avance lineal, evitando enredos y tirones. Protege las líneas.
+  \item \textbf{S4.6 Mangueras independientes con soporte de resorte.} Un resorte de balance sostiene las líneas y alivia su peso. Es simple y económico.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{08-busqueda-interna/recursos/solucion-s4.jpeg}
+    \caption{Alternativas para el transporte de material de soldadura. Fuente: Elaboración propia.}
+    \label{fig:soluciones-s4}
+\end{figure}
+\subsection{Controlar velocidad y alcance}
+\textit{Objetivo: regular las RPM y los límites físicos del avance lineal según los parámetros del operador.}
+\begin{itemize}
+  \item \textbf{S5.1 PLC con interfaz HMI táctil.} Permite programar velocidades, rampas y límites de carrera, y almacenar recetas. Es flexible y escalable.
+  \item \textbf{S5.2 Control por estimación visual del operador.} El operador juzga a ojo cuándo detener el avance y ajusta la velocidad manualmente.
+  \item \textbf{S5.3 Variador de frecuencia (VFD) con panel digital.} Regula las RPM del motor con precisión y arranque suave. Es muy usado, eficiente y fácil de operar.
+  \item \textbf{S5.4 Microcontrolador con encoder y sensores inductivos.} Mide posición y velocidad en lazo cerrado, con buena exactitud y bajo costo. Requiere programación a medida.
+  \item \textbf{S5.5 Control por comandos de voz sin retroalimentación.} Se dictan órdenes de velocidad y parada hablando a la máquina.
+  \item \textbf{S5.6 Finales de carrera mecánicos y potenciómetro.} Limitan el recorrido con interruptores físicos y ajustan la velocidad con una perilla. Es barato, simple y robusto.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{08-busqueda-interna/recursos/solucion-s5.jpeg}
+    \caption{Alternativas para el control de velocidad y alcance. Fuente: Elaboración propia.}
+    \label{fig:soluciones-s5}
+\end{figure}

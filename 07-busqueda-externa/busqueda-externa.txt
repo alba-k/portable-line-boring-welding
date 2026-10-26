@@ -1,0 +1,106 @@
+\section{Búsqueda externa de soluciones}
+La búsqueda externa de soluciones se desarrolla tomando como pauta metodológica la descomposición funcional del sistema \cite{busqext-Pahl2007, intro-Ulrich2020}, explorando alternativas tecnológicas para cada subbloque operativo: acople y centrado, transformación motriz, gestión diferenciada de herramientas, recargue por soldadura y enclavamientos de control.
+
+\subsection{Estructura funcional de referencia y análisis de patentes}
+Se analizó la secuencia técnica global que satisface el flujo de la caja negra: \textit{posicionamiento/centrado $\rightarrow$ desbaste inicial $\rightarrow$ cambio de herramienta $\rightarrow$ recargue por soldadura $\rightarrow$ cambio de herramienta $\rightarrow$ mandrinado de acabado}.
+\begin{itemize}
+    \item \textbf{Patente US 7\,020\,942 B2 (Siracusa, Sir Meccanica):} Describe una máquina portátil de mandrinado y soldadura, con el procedimiento de acondicionamiento previo del barreno por corte mecánico, depósito de una capa de soldadura (\textit{weld overlay}) y mecanizado final a la tolerancia nominal (Figura~\ref{fig:patente-us7020942}) \cite{busqext-US7020942}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.85\textwidth]{07-busqueda-externa/recursos/patente-US7020942.png}
+        \caption{Máquina portátil de mandrinado y soldadura de la patente US 7\,020\,942 B2 \cite{busqext-US7020942}.}
+        \label{fig:patente-us7020942}
+    \end{figure}
+
+    \item \textbf{Patente US 6\,447\,220 B1 (Ricci y Gardzinski):} Registra una máquina portátil de mandrinado y refrentado dotada de servomotor de velocidad variable, avance axial por husillo roscado y bridas de montaje con mecanismo oscilante (\textit{swivel}) para alineación coaxial exacta con el centro del barreno \cite{busqext-US6447220}.
+    \item \textbf{Patente US 6\,295\,707 B1 (Siracusa, Sir Meccanica):} Plantea una configuración simplificada con dos motores independientes (rotación y traslación) para independizar cinemáticamente la velocidad de corte respecto al paso de avance \cite{busqext-US6295707}.
+    \item \textbf{Desarrollos de Maucotools (C40 y serie LBM Dual System):} Introducen el concepto de cuerpo separable en dos módulos independientes (unidad de avance o soldadura y cuerpo motriz), el centrado de la barra sin puntos de soldadura previos y acoples para el aporte de soldadura radial y frontal \cite{busqext-MaucotoolsLBM, busqext-MaucotoolsVideo}.
+\end{itemize}
+
+\subsection{Posicionamiento y centrado (subfunción: acoplar y dirigir el eje)}
+Mapeado directo con la subfunción de \textit{acoplar la pieza con la máquina} y \textit{dirigir la energía rotacional/lineal sobre el eje del alojamiento}.
+\begin{itemize}
+    \item \textbf{Alternativas tecnológicas:} Soportes esféricos con tolerancia de desalineación angular de hasta $5^\circ$, conos de autocentrado, varillas de alineación coaxial \cite{busqext-US8304680}, chumaceras de pared con rótula y kits de centrado interno rápido mediante tornillos de desplazamiento radial sin requerir cordones de soldadura provisionales \cite{busqext-MaucotoolsLBM}.
+    \item \textbf{Parámetros y normas:} Coaxialidad rigurosa respecto al eje teórico y tolerancia del diámetro final ajustada a la norma \textbf{UNE-EN ISO 286-1} \cite{busqext-UNE-ISO286-1}. El sistema debe incluir un enclavamiento físico/lógico que impida el arranque si el centrado no es válido.
+\end{itemize}
+
+\subsection{Rotación, avance y mecanizado (subfunción: transmisión y control motriz)}
+Mapeado con las subfunciones de \textit{transformación de energía eléctrica a rotacional}, \textit{transmisión de energía cinética} y \textit{control de velocidad/alcance}.
+\begin{itemize}
+    \item \textbf{Alternativas de accionamiento:} Reductores de tornillo sinfín-corona (ofrecen alta reducción y torque compacto en volumen reducido), motorreductores eléctricos regulados por variador de frecuencia (VFD) alimentado a $220\text{ V}$ monofásicos, y motores paso a paso o servomotores acoplados a husillos de potencia con rosca trapecial ACME \cite{busqext-US6295707, busqext-US6447220}.
+    \item \textbf{Cálculo de parámetros:} La velocidad de giro $n$ (en rpm) se calcula a partir de la velocidad de corte $V_c$ (en m/min) y del diámetro $D$ (en mm) como:
+    \begin{equation}
+        n = \frac{1000 \cdot V_c}{\pi \cdot D}
+    \end{equation}
+    Para mantener la velocidad de corte $V_c$ constante en el rango de $\varnothing 30$ a $150\text{ mm}$, el accionamiento debe cubrir una relación de velocidades de $5:1$ \cite{busqext-Alarcon2021}. El avance debe conmutar entre el régimen de mandrinado ($0 - 0{,}46\text{ mm/rev}$) y el de recargue ($1 - 5\text{ mm/rev}$) \cite{busqext-ClimaxBB5000}.
+    \item \textbf{Normativa aplicable:} Seguridad del equipo eléctrico según \textbf{UNE-EN 60204-1} \cite{busqext-UNE-60204-1} y parada de emergencia según \textbf{UNE-EN ISO 13850} \cite{busqext-UNE-ISO13850}.
+\end{itemize}
+\subsection{Sujeción de herramientas (subfunción: sujeción de herramientas)}
+Mapeado con la \textit{sujeción de herramientas}: alta resistencia mecánica y absorción de torque y vibraciones para el portaherramientas de corte, y alineación y precisión geométrica estables para la antorcha de soldadura.
+\begin{itemize} 
+\item \textbf{Alternativas tecnológicas:} 
+En herramientas de corte, destacan las barras portaherramientas con orificios radiales y prisioneros opresores \cite{busqext-US6447220}, el acople por Cono Morse 3 (MT3) con lengüeta de arrastre de cambio rápido \cite{busqext-MaucotoolsLBM} y los cabezales con ajuste micrométrico radial \cite{busqext-ClimaxBB5000}. En herramientas de aporte (antorcha), destacan el soporte de collar esférico de rápida fijación \cite{busqext-ClimaxBB5000, busqext-ClimaxBW3000}, las abrazaderas articuladas de dos ejes con bloqueo mecánico y los bloques de montaje con aislamiento dieléctrico y térmico. 
+\item \textbf{Parámetros y normas:} Garantizar la rigidez torsional y resistencia mecánica ante fuerzas de corte para evitar el fenómeno de vibración (\textit{chatter}), asegurando la precisión dimensional del barreno bajo la norma \textbf{ISO 286-1} \cite{busqext-ISO286-1}. Asegurar la estabilidad geométrica y repetibilidad ($\le \pm 0.1\text{ mm}$) en la orientación del arco eléctrico y del gas protector. Se requiere además prevención del arranque imprevisto durante el montaje conforme a \textbf{UNE-EN ISO 14118} \cite{busqext-UNE-ISO14118}, aislamiento y seguridad eléctrica de fuentes y antorchas según las normas \textbf{UNE-EN IEC 60974-1} y \textbf{UNE-EN IEC 60974-7} \cite{busqext-UNE-60974-1, busqext-UNE-60974-7}, y un tiempo máximo de acople $< 30\,\text{min}$. 
+\end{itemize}
+
+\subsection{Recargue por soldadura (subfunción: transportar e inyectar material)}
+Mapeado con \textit{transportar material para soldadura} y \textit{sujetar herramienta de aporte}.
+\begin{itemize}
+    \item \textbf{Alternativas tecnológicas:} Antorchas giratorias continuas para procesos GMAW/MIG (avance continuo o por pasos helicoidales) \cite{busqext-US8304680} y adaptación de antorchas GTAW/TIG con colectores rotativos (\textit{slip rings}) para el paso de corriente y gas protector sin torsión de mangueras \cite{busqext-ClimaxBoreWelding}.
+    \item \textbf{Criterios térmicos y de aporte:} El aporte térmico neto se rige por:
+    \begin{equation}
+        H = \frac{\eta \cdot U \cdot I}{v}
+    \end{equation}
+    donde $\eta$ es el rendimiento térmico del proceso, $U$ la tensión, $I$ la corriente y $v$ la velocidad de avance tangencial \cite{antec-Kou2020, busqext-ASM6A-2011}. Debido a que la velocidad tangencial varía con el radio, el control debe ajustar las RPM de giro de forma inversamente proporcional al diámetro para garantizar un cordón uniforme.
+    \item \textbf{Normativa de soldadura y seguridad:} Clasificación de consumibles según \textbf{AWS A5.18} \cite{busqext-AWSA5.18-2025} y \textbf{AWS A5.28} \cite{busqext-AWSA5.28-2020}. Requisitos de diseño e inspección de juntas bajo \textbf{AWS D14.0/D14.0M:2024} \cite{busqext-AWSD14.0-2024}. Extracción de humos y seguridad laboral conforme a \textbf{NTP 494} \cite{busqext-NTP494} y \textbf{NTP 7} \cite{busqext-NTP7}.
+\end{itemize}
+
+\subsection{Control, enclavamientos y seguridad}
+Mapeado con las señales de regulación, comandos del operador y señales de proceso.
+\begin{itemize}
+    \item \textbf{Alternativas tecnológicas:} Automatización secuencial mediante microcontrolador/PLC, finales de carrera electromecánicos/inductivos para delimitar el recorrido longitudinal, y consolas de comando remoto por cable ($>120\text{ cm}$) para alejar al operario de la radiación UV y los humos metálicos \cite{busqext-MaucotoolsLBM, busqext-ClimaxBW3000}.
+    \item \textbf{Normativa de seguridad y salud:} Evaluación integral de riesgos mecánicos bajo \textbf{UNE-EN ISO 12100} \cite{busqext-UNE-ISO12100} y cumplimiento del \textbf{Decreto Ley N.\textdegree{}~16998} (Ley General de Higiene, Seguridad Ocupacional y Bienestar) \cite{busqext-DL16998}.
+\end{itemize}
+
+\subsection{Análisis de referencias comerciales (\textit{benchmarking})}
+Se analizan los principales equipos comerciales internacionales que integran las subfunciones requeridas (Tabla~\ref{tab:benchmarking_comercial}).
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Equipos comerciales de referencia para mandrinado y recargue de barrenos.}
+    \label{tab:benchmarking_comercial}
+    \begin{tabular}{p{3.2cm} p{2.2cm} p{3.8cm} p{5.2cm}}
+        \toprule
+        \textbf{Equipo / Modelo} & 
+        \textbf{Origen} & 
+        \textbf{Rango de Trabajo} & 
+        \textbf{Rasgos Tecnológicos de Interés} \\
+        \midrule
+        \textbf{CLIMAX BB5000} \cite{busqext-ClimaxBB5000} & EE. UU. & $\varnothing 34{,}9\text{ a }609{,}6\text{ mm}$ & Avance reversible mecánico ($0\text{ a }0{,}46\text{ mm/rev}$); montaje en $<30\text{ min}$; alta rigidez estructural \cite{busqext-ClimaxBB5000-120V}. \\
+        \textbf{CLIMAX BW3000} \cite{busqext-ClimaxBW3000} & EE. UU. & Carrera $152{,}4 / 304{,}8\text{ mm}$ & Cabezal de recargue automático por pasos; acople concéntrico con la barra mandrinadora BB5000 \cite{busqext-ClimaxTop10-BW3000}. \\
+        \textbf{Sir Meccanica serie Ws} \cite{busqext-SirMeccanicaWS} & Italia & $\varnothing 22\text{ a }1700\text{ mm}$ (8 modelos) & Mecanizado y recargue interno/externo con un único centrado; transmisión en línea \cite{busqext-SirMeccanicaCatalogo}. \\
+        % POR CONFIRMAR: el rango Ø45–600 mm de Maucotools no aparece en la web; verificar en su catálogo.
+        \textbf{Maucotools C40 / LBM Dual System} \cite{busqext-MaucotoolsLBM} & Italia & $\varnothing 45\text{ a }600\text{ mm}$ & Sistema modular desacoplable; centrado rápido sin soldadura previa; comando remoto por cable. \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Síntesis de requisitos y brechas}
+La Tabla \ref{tab:sintesis_normas} consolida las normas técnicas, variables operativas y criterios de ingeniería asociados a cada bloque funcional.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Consolidado de normas, parámetros y criterios por bloque funcional.}
+    \label{tab:sintesis_normas}
+    \begin{tabular}{p{3.2cm} p{3.8cm} p{3.5cm} p{4.2cm}}
+        \toprule
+        \textbf{Bloque funcional} & \textbf{Norma} & \textbf{Parámetro clave} & \textbf{Criterio o tolerancia objetivo} \\ \midrule
+        \textbf{Posicionamiento y centrado} & UNE-EN ISO 286-1 \cite{busqext-UNE-ISO286-1} & Coaxialidad y centrado entre ojos & Enclavamiento de centrado válido antes de habilitar giro; distancia entre ojos $100 - 600\text{ mm}$. \\
+        \textbf{Mecanizado (desbaste y acabado)} & UNE-EN 60204-1 \cite{busqext-UNE-60204-1} \newline UNE-EN ISO 13850 \cite{busqext-UNE-ISO13850} & Régimen de RPM y avance de corte & $n = \frac{1000 \cdot V_c}{\pi \cdot D}$; relación de transmisión 5:1; botón de parada de emergencia activo. \\
+        \textbf{Cambio de herramienta} & UNE-EN ISO 14118 \cite{busqext-UNE-ISO14118} \newline UNE-EN IEC 60974-1/7 \cite{busqext-UNE-60974-1, busqext-UNE-60974-7} & Aislamiento de potencia y rigidez & Interrupción de energía motriz/arco; tiempo de reemplazo $<30\text{ min}$ con alineación repetible. \\
+        \textbf{Recargue por soldadura} & AWS D14.0/D14.0M:2024 \cite{busqext-AWSD14.0-2024} \newline AWS A5.18 / A5.28 \cite{busqext-AWSA5.18-2025, busqext-AWSA5.28-2020} & Aporte térmico $H = \frac{\eta UI}{v}$ y paso & RPM inversamente proporcionales al radio; avance de $1\text{ a }5\text{ mm/rev}$; control de humos \cite{busqext-NTP494}. \\
+        \textbf{Control y seguridad} & UNE-EN ISO 12100 \cite{busqext-UNE-ISO12100} \newline Decreto Ley 16998 \cite{busqext-DL16998} & Enclavamientos y seguridad del operario & Consola remota; paro automático en fin de carrera; matriz de riesgos conforme a norma. \\ \bottomrule
+    \end{tabular}
+\end{table}

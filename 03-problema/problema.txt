@@ -1,0 +1,19 @@
+\section{Problemática}
+
+En los talleres de Santa Cruz, el recargue de los alojamientos de pasadores se realiza de forma manual. La dispersión de la velocidad de avance y de la longitud del arco provoca desviaciones en el aporte térmico \cite{antec-Lancaster1986}, que se traducen en un espesor de recargue no uniforme, defectos de fusión y pérdida de la cota original del barreno. En consecuencia, la reparación exige más mecanizado, no es repetible y prolonga la inactividad de la maquinaria.
+
+\subsection*{Pregunta de investigación}
+¿Cómo diseñar un sistema portátil que coordine la rotación y el avance del recargue y del mandrinado, de modo que el aporte térmico sea uniforme y el diámetro final del alojamiento sea repetible?
+
+\subsection{Público específico y beneficiarios}
+
+\subsubsection*{Beneficiarios directos}
+\begin{itemize}
+    \item \textbf{Operadores y soldadores técnicos (público operativo):} personal de taller que reduce la fatiga física y la exposición a la radiación del arco eléctrico, al sustituir el pulso manual por un sistema de avance automatizado.
+    \item \textbf{Talleres metalmecánicos de Santa Cruz (público comercial):} pequeñas y medianas empresas locales que aumentan su productividad, reducen los tiempos de entrega (\textit{lead time}) y estandarizan la calidad geométrica del recargue.
+\end{itemize}
+
+\subsubsection*{Beneficiarios indirectos}
+\begin{itemize}
+    \item \textbf{Empresas agroindustriales y de construcción (usuario final):} propietarios de maquinaria pesada que disminuyen los tiempos de inactividad (\textit{downtime}) de sus equipos y reducen costos al evitar la importación de repuestos nuevos.
+\end{itemize}

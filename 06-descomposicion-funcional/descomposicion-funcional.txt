@@ -1,0 +1,38 @@
+\section{Descomposición funcional}
+Para explorar soluciones de manera estructurada y evitar un enfoque prematuro en un solo concepto, el problema se abstrajo utilizando el método de caja negra y posterior división en subfunciones.
+
+\subsection{Diagrama de caja negra}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{06-descomposicion-funcional/recursos/caja-negra.png}
+    \caption{Representación del sistema como caja negra. Fuente: Elaboración propia.}
+    \label{fig:caja_negra}
+\end{figure}
+
+\textbf{Flujos del sistema:}
+\begin{itemize}
+    \item \textbf{Entradas:} Energía eléctrica, material de aporte, señal de accionamiento, alojamiento desgastado y herramienta de uso.
+    \item \textbf{Salidas:} Alojamiento mandrilado, alojamiento rellenado por soldadura.
+\end{itemize}
+
+\subsection{Descomposición en subfunciones}
+La caja negra se desglosó en una red unificada de subfunciones. A partir de las entradas generales, se establecieron las estructuras operativas mapeando el flujo continuo de energía, materiales y parámetros de control hasta obtener el estado final de la pieza.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{06-descomposicion-funcional/recursos/descomposicion-funcional.png}
+    \caption{Estructura de la descomposición funcional del sistema. Fuente: Elaboración propia.}
+    \label{fig:descomposicion_funcional}
+\end{figure}
+
+\textbf{Subfunciones principales.} De acuerdo con la estructura del diagrama, el proceso se divide en las siguientes operaciones críticas:
+
+\begin{itemize}
+    \item \textbf{Acoplar la pieza con la máquina:} Establecer una unión rígida entre el equipo y el alojamiento desgastado para garantizar la estabilidad estructural, evitando vibraciones.
+    \item \textbf{Transformación y transmisión de energía:} La energía eléctrica se convierte en movimiento rotacional mediante el sistema motriz. Posteriormente, esta energía cinética se transmite hacia los mecanismos encargados de ejecutar los movimientos finales.
+    \item \textbf{Sujeción de herramientas:} El sistema de fijación tiene la función de asegurar la herramienta de trabajo adaptándose a las exigencias del proceso. Su diseño garantiza tanto la resistencia mecánica necesaria para soportar cargas, torque y vibraciones, como la precisión geométrica y estabilidad requeridas para el posicionamiento exacto de la herramienta.
+    \item \textbf{Transportar material para soldadura:} Al emplearse equipos independientes para el suministro, el sistema externaliza esta carga. La máquina actúa únicamente como medio para canalizar los insumos (alambre y gas) desde las fuentes externas hasta la zona de trabajo.
+    \item \textbf{Controlar velocidad y alcance:} Los parámetros introducidos por el operador actúan como señales de regulación en el panel de control, determinando la velocidad rotacional (RPM) y los límites físicos del avance lineal.
+\end{itemize}
+
+La interacción secuencial y coordinada de estos factores mecánicos y de control culmina en el reacondicionamiento total de la pieza, arrojando como salidas físicas el alojamiento mandrilado y el alojamiento rellenado por soldadura.

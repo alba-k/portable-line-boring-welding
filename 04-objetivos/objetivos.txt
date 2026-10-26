@@ -1,0 +1,13 @@
+\section{Objetivos}
+
+\subsection*{Objetivo general}
+Diseñar el prototipo de una máquina semiautomatizada para el recargue por soldadura de alojamientos de pasadores de maquinaria pesada, mediante el diseño mecánico y la simulación computacional de sus parámetros cinemáticos, con el fin de corregir las desviaciones del aporte térmico y prolongar la vida útil de los componentes restaurados.
+
+\subsection*{Objetivos específicos}
+\begin{enumerate}
+    \item Diagnosticar las deficiencias técnicas y operativas del mantenimiento actual de alojamientos de pasadores en el entorno local, mediante el análisis de las prácticas manuales y de las alternativas comerciales, para establecer los requerimientos de diseño de la máquina.
+    \item Estructurar el diseño conceptual del sistema semiautomatizado mediante el método de cinco pasos, para seleccionar la alternativa cinemática más adecuada.
+    \item Diseñar en detalle el modelo tridimensional de la alternativa seleccionada en un entorno CAD (SolidWorks), definiendo la geometría, los materiales y los componentes mecatrónicos comerciales necesarios para el ensamble.
+    \item Validar la integridad estructural del diseño mediante análisis por elementos finitos, para garantizar que los componentes críticos operen dentro del régimen elástico bajo las cargas de trabajo.
+    \item Evaluar la viabilidad cinemática y operativa del sistema mediante la construcción y el ensayo de uno de sus módulos, comprobando la correcta sincronización de los movimientos requeridos.
+\end{enumerate}

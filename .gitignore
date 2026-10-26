@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.tmp
+*.bak
+*.crdownload
+Thumbs.db
+desktop.ini
+/Mandriladora.pdf

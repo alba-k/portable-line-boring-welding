@@ -1,0 +1,91 @@
+% ============================================================
+% Informe: Mandriladora portátil y sistema de recargue
+% Cada sección vive en su carpeta (NN-nombre/nombre.txt) con su
+% referencias.bib y sus figuras en recursos/. Compilar con:
+%   pdflatex Mandriladora -> bibtex Mandriladora -> pdflatex x2
+% ============================================================
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Idioma y codificación ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}\renewcommand{\listtablename}{Índice de tablas}}
+
+% ---------- Página ----------
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+% ---------- Matemáticas, figuras y tablas ----------
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{pgfplots}            % gráficos de datos dentro de LaTeX
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{babel}            % evita conflictos de tikz con babel-spanish
+
+% ---------- Citas y enlaces (hyperref siempre al final) ----------
+\usepackage{cite}
+\usepackage{url}
+\usepackage{hyperref}
+
+\title{\textbf{Diseño CAD/CAE de un sistema semiautomatizado para el recargue de soldadura en alojamientos de pasadores de maquinaria pesada}}
+\author{Alba Rodríguez, Mauri Yeison \and Sandi Vargas, Julio Constantino}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\input{00-resumen/resumen.txt}
+
+\newpage
+\tableofcontents
+\newpage
+
+\input{01-introduccion/introduccion.txt}
+\input{02-antecedentes/antecedentes.txt}
+\input{03-problema/problema.txt}
+\input{04-objetivos/objetivos.txt}
+\input{05-necesidades-especificaciones/necesidades-especificaciones.txt}
+\input{06-descomposicion-funcional/descomposicion-funcional.txt}
+\input{07-busqueda-externa/busqueda-externa.txt}
+\input{08-busqueda-interna/busqueda-interna.txt}
+\input{09-exploracion-sistematica/exploracion-sistematica.txt}
+\input{10-filtrado-conceptos/filtrado-conceptos.txt}
+\input{11-evaluacion-seleccion/evaluacion-seleccion.txt}
+\input{12-diseno-cad/diseno-cad.txt}
+\input{13-analisis-fea/analisis-fea.txt}
+\input{14-planos/planos.txt}
+\input{15-conclusiones-recomendaciones/conclusiones-recomendaciones.txt}
+
+\newpage
+% Una sola lista de referencias en estilo IEEE, armada con los
+% referencias.bib de todas las secciones.
+\renewcommand{\refname}{Referencias}
+\bibliographystyle{IEEEtran}
+\bibliography{%
+  00-resumen/referencias,%
+  01-introduccion/referencias,%
+  02-antecedentes/referencias,%
+  03-problema/referencias,%
+  04-objetivos/referencias,%
+  05-necesidades-especificaciones/referencias,%
+  06-descomposicion-funcional/referencias,%
+  07-busqueda-externa/referencias,%
+  08-busqueda-interna/referencias,%
+  09-exploracion-sistematica/referencias,%
+  10-filtrado-conceptos/referencias,%
+  11-evaluacion-seleccion/referencias,%
+  12-diseno-cad/referencias,%
+  13-analisis-fea/referencias,%
+  14-planos/referencias,%
+  15-conclusiones-recomendaciones/referencias}
+
+\end{document}

@@ -1,0 +1,96 @@
+\section{Necesidades del cliente y especificaciones objetivo}
+
+\subsection{Necesidades del cliente}
+
+Los parámetros de diseño se establecieron mediante una encuesta de diagnóstico técnico aplicada a 8 mecánicos soldadores y 6 operadores de maquinaria pesada. Los resultados tabulados recogen las tendencias operativas reales que fundamentan la conceptualización de la máquina.
+
+El desgaste de pasadores provoca inactividad crítica. La totalidad de los operadores encuestados reporta paradas que superan las 24 horas, mientras que la reparación de desgastes severos exige entre uno y dos días de taller (Figura~\ref{fig:enc-paradas}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{05-necesidades-especificaciones/recursos/encuesta-paradas.png}
+\caption{Frecuencia y duración de las paradas por daño en pasadores ($n=6$ operadores) y tiempo de reparación en desgaste severo ($n=8$ técnicos). Fuente: Elaboración propia.}
+\label{fig:enc-paradas}
+\end{figure}
+
+Para mitigar estos tiempos muertos, los usuarios priorizan la implementación de equipos portátiles. El traslado manual se considera viable frente al beneficio de agilizar el retorno a producción (Figura~\ref{fig:enc-operador}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{05-necesidades-especificaciones/recursos/encuesta-operador.png}
+\caption{Modalidad de operación, beneficio esperado y facilidad de traslado exigida por los operadores ($n=6$). Fuente: Elaboración propia.}
+\label{fig:enc-operador}
+\end{figure}
+
+La Tabla~\ref{tab:necesidades} resume las preferencias operativas y las restricciones métricas extraídas de la muestra.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Preferencias y tendencias mayoritarias extraídas del diagnóstico técnico. Fuente: Elaboración propia.}
+\label{tab:necesidades}
+\begin{tabular}{@{} p{0.30\textwidth} p{0.40\textwidth} p{0.25\textwidth} @{}}
+\toprule
+\textbf{Parámetro evaluado} & \textbf{Preferencia o tendencia mayoritaria} & \textbf{Frecuencia} \\
+\midrule
+Modalidad de operación & Equipo portátil o de capacidad dual. & 5 de 6 operadores (83.3\,\%) \\
+\addlinespace
+Tiempos muertos actuales & Paradas inaceptables de 1 a 4 días. & 6 de 6 operadores (100\,\%) \\
+\addlinespace
+Beneficio esperado & Reducción de fatiga y rapidez de entrega. & 4 de 6 operadores (66.6\,\%) \\
+\addlinespace
+Diámetro interior habitual & Rango de trabajo entre 30 y 150\,mm. & 6 de 8 técnicos (75.0\,\%) \\
+\addlinespace
+Suministro eléctrico & Uso de red 220\,V (monofásico o generador). & 7 de 8 técnicos (87.5\,\%) \\
+\addlinespace
+Proceso de soldadura & Empleo de GTAW (TIG) como principal. & 5 de 8 técnicos (62.5\,\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Especificaciones objetivo}
+
+Las tendencias de la Tabla~\ref{tab:necesidades} se tradujeron en especificaciones de ingeniería con valores límite verificables.
+
+El dimensionamiento mecánico del prototipo se restringirá a los rangos de operación estadísticamente más frecuentes (Figura~\ref{fig:enc-geometria}): diámetros de 30 a 150\,mm, distancia máxima de 600\,mm entre centros, y un rellenado continuo de hasta 60\,mm.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{05-necesidades-especificaciones/recursos/encuesta-geometria.png}
+\caption{Parámetros geométricos de los alojamientos reparados ($n=8$ técnicos). Fuente: Elaboración propia.}
+\label{fig:enc-geometria}
+\end{figure}
+
+En la interfaz energética, el equipo se acoplará a la infraestructura existente, operando con corriente monofásica de 220\,V y sistemas TIG comerciales (Figura~\ref{fig:enc-proceso}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{05-necesidades-especificaciones/recursos/encuesta-proceso.png}
+\caption{Proceso de soldadura y suministro eléctrico disponibles ($n=8$ técnicos). Fuente: Elaboración propia.}
+\label{fig:enc-proceso}
+\end{figure}
+
+La Tabla~\ref{tab:especificaciones} define las metas cuantitativas finales del diseño. Los parámetros restrictivos (masa $<35$\,kg y tiempo de acople $<30$\,min) se validarán mediante simulaciones en el entorno CAD/CAE y pruebas en el prototipo funcional.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Especificaciones objetivo del diseño mecatrónico. Fuente: Elaboración propia.}
+\label{tab:especificaciones}
+\begin{tabular}{@{}p{0.34\textwidth}p{0.15\textwidth}l p{0.30\textwidth}@{}}
+\toprule
+\textbf{Especificación (métrica)} & \textbf{Valor objetivo} & \textbf{Unidad} & \textbf{Origen} \\
+\midrule
+Rango de diámetro interior a reconstruir & 30 -- 150 & mm & P3: 6 de 8 técnicos \\
+Longitud entre centros (ojo a ojo) & 100 -- 600 & mm & P4: 7 de 8 técnicos hasta 600\,mm \\
+Longitud máxima de rellenado continuo & Hasta 60 & mm & P5: 7 de 8 técnicos \\
+Masa total transportable por 1 persona & $< 35$ & kg & Criterio de diseño \\
+Tiempo de preparación, alineación y acople & $< 30$ & min & Criterio de diseño \\
+% POR REVISAR: la Tabla de necesidades dice 7 de 8 (87,5 %) usan 220 V; aquí dice 6 de 8. Unificar con los datos de la encuesta.
+Alimentación eléctrica compatible & 220 / 380 & V & P8: 6 de 8 técnicos; 2 de 8 usan generador portátil \\
+Proceso de soldadura compatible & GTAW (GMAW opcional) & -- & P7: GTAW en 5 de 8, GMAW en 2 de 8 \\
+Velocidad de avance lineal paramétrica & 1 -- 5 & mm/rev & Criterio de diseño \\
+\bottomrule
+\end{tabular}
+\end{table}
+

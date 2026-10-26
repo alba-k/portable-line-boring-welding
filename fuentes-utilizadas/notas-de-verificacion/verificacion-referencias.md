@@ -90,7 +90,7 @@ PDF: **Libre** = descarga legal gratuita · **Pago** = solo enlace/DOI · **—*
 
 # Fuentes del cuaderno de Gemini (31) · verificadas el 25-10-2026
 
-Las fuentes verificadas están en `fuentes-verificadas/fuentes-cuaderno.bib`, con claves `cuad-…`. Todavía no tienen sección asignada: se pasan al `referencias.bib` de cada sección cuando se escriba el texto.
+Las fuentes verificadas están en `fuentes-utilizadas/notas-de-verificacion/fuentes-cuaderno.bib`, con claves `cuad-…`. Todavía no tienen sección asignada: se pasan al `referencias.bib` de cada sección cuando se escriba el texto.
 
 ## Artículos con DOI (verificados en Crossref)
 

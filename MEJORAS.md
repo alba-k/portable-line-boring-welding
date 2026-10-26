@@ -8,7 +8,7 @@ En los `.txt`, las notas `% POR REVISAR`, `% POR CONFIRMAR` y `% PENDIENTE` marc
 
 - **Estructura nueva:** cada sección tiene su `.txt`, su `referencias.bib` y su carpeta `recursos/`. `Mandriladora.tex` reúne todas las secciones y arma **una sola lista de "Referencias"** a partir de todos los `.bib`.
 - **Estilo de citas:** se pasa de `ieeetr` a `IEEEtran`. Ambos son IEEE, pero `IEEEtran` también muestra las URL y las fechas de consulta.
-- **Referencias:** se eliminaron las 6 inventadas, se corrigieron los datos erróneos y se unificaron los duplicados (detalle en `fuentes-verificadas/verificacion-referencias.md`). Las claves llevan el prefijo de su sección (`intro-`, `antec-`, `busqext-`). Cada fuente aparece en un solo `.bib`, aunque se cite en varias secciones.
+- **Referencias:** se eliminaron las 6 inventadas, se corrigieron los datos erróneos y se unificaron los duplicados (detalle en `fuentes-utilizadas/notas-de-verificacion/verificacion-referencias.md`). Las claves llevan el prefijo de su sección (`intro-`, `antec-`, `busqext-`). Cada fuente aparece en un solo `.bib`, aunque se cite en varias secciones.
 - **Figuras:** se copiaron a `recursos/` de cada sección, con nombres sin espacios ni puntos (por ejemplo, `solucion s1.1.jpeg` pasó a `solucion-s1-1.jpeg`), porque esos caracteres hacen fallar a LaTeX. Las imágenes que estaban sueltas con `\begin{center}` ahora son figuras con título y "Fuente".
 - **Preámbulo:** se juntaron `main.tex` y `config.tex` en un solo `Mandriladora.tex`. Se quitaron paquetes repetidos (`booktabs` estaba dos veces), se activaron márgenes de 2,5 cm en A4 y las tablas se llaman "Tabla" en vez de "Cuadro".
 - **Títulos:** todos los encabezados quedaron en tipo oración ("Búsqueda externa de soluciones" en vez de "Búsqueda Externa de Soluciones"), como pide la RAE.
@@ -62,6 +62,12 @@ Criterios acordados con Yeison: registro técnico-formal (ni coloquial ni rebusc
 - Se agregaron los datos de la encuesta (paradas > 24 h), la ecuación numerada del aporte térmico (HI = ηVI/v) y referencias a cada figura en el texto.
 - La AWS D14 pasa de "regula la reparación" a "referencia de calidad" (queda % POR CONFIRMAR). La Ley 1391 se usa como evidencia de la importación. Se corrigió "distorsión de la ZAC".
 - Prueba de compilación (copia en inglés/ieeetr): sin errores ni citas sin resolver.
+
+## Repositorio y fuentes (26-10-2026)
+
+- El informe se subió a GitHub: https://github.com/alba-k/portable-line-boring-welding (`.gitignore` deja fuera los auxiliares de LaTeX y `Mandriladora.pdf`).
+- La carpeta `fuentes-verificadas/` pasó a llamarse `fuentes-utilizadas/`. Reúne los PDF de las fuentes citadas y un `README.md` con las 50 fuentes del informe: PDF guardados, PDF libres por descargar (con el nombre de archivo a usar), páginas web y videos, y libros/normas sin PDF (solo enlace). Se agregaron los PDF de Ulrich 5.ª ed. y Liou, y las diapositivas 4 y 5 del curso en `material-del-curso/`.
+- Se agregó el PDF de la patente US 7 020 942 B2. Las notas de verificación quedaron en `fuentes-utilizadas/notas-de-verificacion/`.
 
 ## Historial de versiones del PDF
 

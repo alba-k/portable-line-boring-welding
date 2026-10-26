@@ -3,38 +3,51 @@
 A continuación se proponen alternativas para cada subfunción. El descarte de las que no son viables, con su justificación, se presenta en la exploración sistemática (Sección~\ref{sec:exploracion}).
 
 \subsection{Acoplar la pieza con la máquina}
-\textit{Objetivo: lograr una unión rígida entre el equipo y el alojamiento desgastado, evitando vibraciones.}
+\textit{Objetivo: lograr una unión rígida entre el equipo y el alojamiento desgastado, evitando vibraciones.} Las alternativas se ilustran en la Figura~\ref{fig:soluciones-s1}.
 \begin{itemize}
   \item \textbf{S1.1 Brida de sujeción con pernos.} Una brida atornillada a las caras del alojamiento fija el equipo con alta rigidez. Es económica, robusta y de montaje sencillo.
-  \begin{center}
-     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-1.jpeg}
-\end{center}
 \item \textbf{S1.2 Base magnética de alta fuerza.} Un electroimán fija la máquina sobre superficies ferrosas sin perforar. Permite posicionamiento rápido, pero su rigidez depende de la superficie y el espesor del material.
-
-  \begin{center}
-     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-2.jpeg}
-\end{center}
 \item \textbf{S1.3 Pegamento epóxico estructural.} Se adhiere el equipo a la pieza con resina de alta resistencia. Evita elementos de fijación mecánicos.
-
-  \begin{center}
-     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-3.jpeg}
-\end{center}
 \item \textbf{S1.4 Cadena o correa de tensado.} Una cadena tensada alrededor de la pieza se adapta a distintas geometrías. Es rápida de instalar y portátil, aunque algo menos rígida.
-
-  \begin{center}
-     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-4.jpeg}
-\end{center}
 \item \textbf{S1.5 Fijación temporal por soldadura.} Se une el soporte de la máquina directamente a la pieza mediante puntos de soldadura. Proporciona máxima rigidez y seguridad frente a vibraciones.
-
-  \begin{center}
-     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-5.jpeg}
-\end{center}
 \item \textbf{S1.6 Mandril hidráulico expansible.} Se ancla al diámetro interior del alojamiento y centra el equipo. Da excelente concentricidad y rigidez, con mayor costo.
-
-  \begin{center}
-     \includegraphics[width=0.5\textwidth]{08-busqueda-interna/recursos/solucion-s1-6.jpeg}
-\end{center}
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{08-busqueda-interna/recursos/solucion-s1-1.jpeg}
+        \caption{S1.1}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{08-busqueda-interna/recursos/solucion-s1-2.jpeg}
+        \caption{S1.2}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{08-busqueda-interna/recursos/solucion-s1-3.jpeg}
+        \caption{S1.3}
+    \end{subfigure}
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{08-busqueda-interna/recursos/solucion-s1-4.jpeg}
+        \caption{S1.4}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{08-busqueda-interna/recursos/solucion-s1-5.jpeg}
+        \caption{S1.5}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{08-busqueda-interna/recursos/solucion-s1-6.jpeg}
+        \caption{S1.6}
+    \end{subfigure}
+    \caption{Alternativas para acoplar la pieza con la máquina: (S1.1) brida con pernos, (S1.2) base magnética, (S1.3) pegamento epóxico, (S1.4) cadena de tensado, (S1.5) fijación por soldadura y (S1.6) mandril expansible. Fuente: Elaboración propia.}
+    \label{fig:soluciones-s1}
+\end{figure}
 
 \subsection{Transformación y transmisión de energía}
 \textit{Objetivo: convertir energía eléctrica en rotación y transmitirla a los mecanismos de movimiento.}

@@ -1,0 +1,46 @@
+modulo;item;descripcion;cantidad;tipo;material_o_referencia;dimensiones_clave_mm;masa_unit_kg;color_solidworks;configuraciones
+A;A1;Patin soldable (fijacion temporal al alojamiento);8;Fabricada;ASTM A36;60x40x12 | rosca M10 pasante | chaflan 45x3 en borde de soldadura;0.22;Gris acero RAL 7043;-
+A;A2;Placa portarrodamiento;2;Fabricada;Al 6061-T6;240x240x15 | alojamiento central D68 H7 | 4 ranuras 11x40 a 45 grados;2.19;Aluminio anodizado natural;P180 (alojamientos hasta D90) / P240 (hasta D150)
+A;A3;Rotula radial autoalineable;2;Comercial;SKF GE 45 ES;d45 D68 B32;0.43;Acero;-
+A;A4;Buje deslizante;2;Fabricada;Bronce SAE 660;D35 F7 / D45 p6 x 32;0.20;Bronce;-
+A;A5;Anillo de retencion para agujero;4;Comercial;DIN 472 - 68;68;0.01;Negro;-
+A;A6;Tornillo cabeza hexagonal + arandela;8;Comercial;ISO 4017 M10x30 8.8;M10x30;0.03;Zincado;-
+B;B1;Barra de mandrinar con chavetero longitudinal;1;Fabricada;AISI 4140 templado y revenido 28-32 HRC;D35 h6 | chavetero 10x5 en toda la longitud | agujeros transversales 12x12 para cuchilla cada 100 mm | espiga D30 x 60 con rosca M30x1,5 (lado avance);7.55;Acero pulido;L500 / L800 / L1000 | familia D25 para alojamientos D30-45 (luz <=300)
+B;B2;Collar partido con brida de centrado;1;Fabricada;AISI 1045;D80 x 40 | agujero D35 H7 | centrador D50 h7 x 4 | 4 roscas M6 en PCD 64 | 2 tornillos de apriete M8;0.85;Azul RAL 5015;-
+B;B3;Bloque portacuchilla (brida);1;Fabricada;AISI 4140;rebaje D50 H7 | 4 pasantes D6,6 | alojamiento de cuchilla 12x12 | tornillo de ajuste radial M6x0,5;0.35;Azul RAL 5015;R80-115 / R115-150 (alcance radial)
+B;B4;Cuchilla de mandrinar;2;Comercial;HSS 12x12x100 o portainserto SCLCR 1212;12x12;0.11;Acero;-
+B;B5;Chaveta paralela;1;Comercial;DIN 6885 A 10x8x30;10x8x30;0.02;Acero;-
+B;B6;Tornillo cilindrico Allen;4;Comercial;ISO 4762 M6x20 12.9;M6x20;0.01;Negro;-
+C;C1;Motor trifasico 4 polos;1;Comercial;0,75 kW 220 V 1450 rpm carcasa 80 B14 aluminio;eje D19;8.50;Gris RAL 7035;Mandrinado
+C;C1R;Motor paso a paso con reductor planetario (modo recargue);1;Comercial;NEMA 23 1,26 N m + planetario 1:20;brida 57;2.10;Negro;Recargue
+C;C2;Reductor sinfin-corona;1;Comercial;NMRV040 i=10 aluminio, eje de salida D18;caja 100x100;2.60;Azul RAL 5015;Mandrinado
+C;C3;Polea dentada motriz;1;Comercial;HTD 5M 24T ancho 15, agujero D18;Dp 38,2;0.12;Aluminio;-
+C;C4;Polea dentada conducida;1;Comercial (mecanizar cubo);HTD 5M 36T ancho 15;Dp 57,3;0.25;Aluminio;-
+C;C5;Correa dentada;1;Comercial;HTD 390-5M-15 (78 dientes);distancia entre centros 119,5;0.03;Negro;-
+C;C6;Manguito de arrastre (chaveta interior);1;Fabricada;AISI 1045;D45 x 90 | agujero D35 H7 con chavetero 10;0.70;Acero;-
+C;C7;Rodamiento rigido de bolas;2;Comercial;SKF 6009-2RS;45x75x16;0.25;Acero;-
+C;C8;Carcasa de transmision / brida de accionamiento;1;Fabricada;Al 6061-T6;240x180x15 + alojamiento 75 H7 | centrador D110 h7 hacia A2 | 4 pernos axiales M8;1.60;Azul RAL 5015;-
+C;C9;Guarda de correa;1;Fabricada;Chapa Al 1,5;envolvente 200x90x30;0.35;Amarillo RAL 1003;-
+C;C10;Encoder incremental;1;Comercial;1000 ppr eje D6 con correa GT2 1:1;D38;0.10;Negro;-
+D;D1;Placa base de avance;1;Fabricada;Al 6061-T6;200x120x15 | centrador D110 h7 hacia A2;0.95;Azul RAL 5015;-
+D;D2;Eje guia lineal;2;Comercial;Acero cromado D12 h6;D12 x 260;0.23;Cromo;C150 (carrera 150 mm)
+D;D3;Rodamiento lineal;2;Comercial;LM12UU;12x21x30;0.02;Acero;-
+D;D4;Husillo trapezoidal + tuerca de bronce;1;Comercial;Tr16x4 x 260;D16;0.40;Acero;C150
+D;D5;Motor paso a paso de avance;1;Comercial;NEMA 23 1,26 N m;57x57x56;1.00;Negro;-
+D;D6;Acople elastico de mordazas;1;Comercial;D10/D8;D25x30;0.04;Aluminio;-
+D;D7;Carro de avance;1;Fabricada;Al 6061-T6;120x80x40 | alojamiento 55 H7;0.80;Azul RAL 5015;-
+D;D8;Rodamientos del extremo de barra;1 juego;Comercial;6006-2RS + 2x 51106;30x55x13 / 30x47x11;0.25;Acero;-
+D;D9;Tuerca ranurada + arandela de seguridad;1;Comercial;DIN 981 KM6 / DIN 5406 MB6;M30x1,5;0.04;Negro;-
+D;D10;Sensor inductivo (fin de carrera y referencia);3;Comercial;M12 PNP NA 4 mm;M12x50;0.03;Negro;-
+D;D11;Soporte de husillo con rodamiento;1;Comercial;BF12;-;0.15;Negro;-
+E;E1;Porta-antorcha (brida);1;Fabricada;Al 6061-T6;rebaje D50 H7 (misma interfaz que B3) | abrazadera D20 | ranura radial 40 | giro +-15 grados;0.50;Azul RAL 5015;Separacion 80-115 / 115-150
+E;E2;Antorcha TIG refrigerada por aire;1;Comercial;WP-17 150 A con cable-manguera de 4 m;-;0.90;Negro;-
+E;E3;Union rotativa de gas y corriente;1;Comercial;Swivel 200 A para antorcha TIG;-;0.40;Laton;POR DEFINIR (ver ESPECIFICACION-MODULOS.md)
+E;E4;Gabinete de control IP54;1;Comercial;Caja metalica 300x250x150;300x250x150;3.50;Gris RAL 7035;-
+E;E5;PLC;1;Comercial;Siemens S7-1200 CPU 1212C DC/DC/DC (salidas de tren de pulsos);-;0.40;Gris;-
+E;E6;HMI tactil;1;Comercial;Siemens KTP400 Basic;4 pulgadas;0.40;Negro;-
+E;E7;Variador de frecuencia;1;Comercial;Siemens V20 0,75 kW entrada 1AC 220 V;-;0.90;Gris;-
+E;E8;Driver de motor paso a paso;2;Comercial;DM556;-;0.20;Negro;-
+E;E9;Fuentes 24 V 5 A y 48 V 5 A;2;Comercial;Riel DIN;-;0.40;Gris;-
+E;E10;Parada de emergencia, termomagnetico 2P 16 A, rele de interbloqueo con la fuente TIG;1 juego;Comercial;-;-;0.40;Rojo/Gris;-
+E;E11;Abrazaderas y soportes de cable-manguera;4;Fabricada;Nylon PA6 impreso o comercial;-;0.03;Negro;-

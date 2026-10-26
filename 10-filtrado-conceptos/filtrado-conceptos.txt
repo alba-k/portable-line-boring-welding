@@ -159,7 +159,14 @@ Una alternativa de compromiso que equilibra un anclaje indeformable con una tran
 \end{itemize}
 
 \subsection{Matriz de filtrado de conceptos}
-Se toma como referencia el Modelo D (Híbrido), por ser una configuración intermedia entre la rigidez del Modelo A y la ligereza del Modelo B. Cada concepto se compara con la referencia en cada criterio: mejor ($+$), igual ($0$) o peor ($-$).
+Se toma como referencia el Modelo D (Híbrido), por ser una configuración intermedia entre la rigidez del Modelo A y la ligereza del Modelo B. Cada concepto se compara con la referencia en cada criterio: mejor ($+$), igual ($0$) o peor ($-$). Los criterios de selección son los mismos que se ponderan en la evaluación (Tabla~\ref{tab:pesos}) y se derivan de las necesidades de la Tabla~\ref{tab:necesidades}:
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Facilidad de manejo:} tiempo de montaje y alineación, y número de operarios requeridos.
+    \item \textbf{Precisión del recargue:} uniformidad del aporte térmico y repetibilidad del diámetro final.
+    \item \textbf{Durabilidad:} resistencia de los elementos a la vibración, al calor del arco y al uso en campo.
+    \item \textbf{Facilidad de manufactura:} posibilidad de fabricar o adquirir los componentes en el mercado local.
+    \item \textbf{Portabilidad:} masa y volumen de los módulos que se trasladan hasta la máquina.
+\end{itemize}
 \begin{table}[H]
 \centering
 \caption{Matriz de filtrado de conceptos}

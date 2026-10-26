@@ -104,3 +104,12 @@ La Tabla \ref{tab:sintesis_normas} consolida las normas técnicas, variables ope
         \textbf{Control y seguridad} & UNE-EN ISO 12100 \cite{busqext-UNE-ISO12100} \newline Decreto Ley 16998 \cite{busqext-DL16998} & Enclavamientos y seguridad del operario & Consola remota; paro automático en fin de carrera; matriz de riesgos conforme a norma. \\ \bottomrule
     \end{tabular}
 \end{table}
+
+\subsection{Implicaciones para el diseño}
+La búsqueda externa deja cuatro lecciones que orientan el diseño de detalle:
+\begin{itemize}
+    \item \textbf{Rotación y avance independientes.} Tanto la patente US~6\,295\,707~B1 como los equipos CLIMAX separan la rotación de la barra y el avance axial en dos accionamientos \cite{busqext-US6295707, busqext-ClimaxBB5000}. Esto permite fijar el paso del recargue (1 a 5\,mm/rev) con independencia de la velocidad de giro.
+    \item \textbf{Velocidades de giro muy distintas para cortar y para soldar.} El cabezal de recargue CLIMAX BW3000 es una unidad de baja velocidad que se acopla a la barra de mandrinar \cite{busqext-ClimaxBW3000}. Las dos operaciones exigen regímenes que difieren en dos órdenes de magnitud, por lo que el accionamiento debe contemplar una configuración específica para el recargue.
+    \item \textbf{Soportes autoalineables.} Las bridas con rótula o mecanismo oscilante compensan la desalineación entre los dos alojamientos \cite{busqext-US6447220}, lo que permite centrar la barra sin exigir un montaje perfecto.
+    \item \textbf{Paso de corriente y gas sin torsión de mangueras.} La antorcha gira con la barra, por lo que se requiere un colector rotativo para la corriente y el gas \cite{busqext-ClimaxBoreWelding}.
+\end{itemize}

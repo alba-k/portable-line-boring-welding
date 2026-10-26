@@ -1,2 +1,95 @@
 \section{Análisis por elementos finitos (FEA)}
-% PENDIENTE: esta sección no existía en el informe anterior.
+\label{sec:fea}
+% BORRADOR (26-10-2026, Claude): casos de carga y plan de estudios listos (diseno-detalle/CASOS-DE-CARGA.md).
+% Falta correr los estudios en SolidWorks Simulation y reemplazar las figuras y los valores [XX].
+\providecommand{\figpendiente}[1]{\fbox{\parbox[c][3.5cm][c]{0.8\textwidth}{\centering\textit{Figura pendiente: #1}}}}
+
+El análisis estructural tiene dos propósitos: verificar que las piezas más cargadas trabajen en el régimen elástico con un factor de seguridad mínimo de 2, y comprobar que sus deformaciones sean compatibles con la tolerancia del alojamiento. Primero se determinaron las cargas de trabajo con un cálculo analítico y, a continuación, se realizaron análisis estáticos lineales en SolidWorks Simulation.
+
+\subsection{Casos de carga}
+Las fuerzas de corte se estimaron con la fuerza específica de corte $k_c$ del material depositado, de aproximadamente 200\,HB \cite{fea-Kalpakjian2014}:
+\begin{equation}
+F_c = k_c \, a_p \, f, \qquad F_r \approx 0{,}4\,F_c, \qquad F_a \approx 0{,}3\,F_c, \qquad T = F_c \frac{D}{2}
+\end{equation}
+donde $a_p$ es la profundidad de pasada, $f$ el avance por revolución, $D$ el diámetro mecanizado, y $F_c$, $F_r$ y $F_a$ las componentes tangencial, radial y axial. Con $k_c = 2500$\,N/mm\textsuperscript{2} se obtuvieron los casos de la Tabla~\ref{tab:casos-carga}.
+% POR CONFIRMAR: valor de k_c y proporciones Fr/Fc y Fa/Fc con la fuente citada.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Casos de carga de mandrinado. Fuente: Elaboración propia.}
+\label{tab:casos-carga}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Caso} & $a_p$ (mm) & $f$ (mm/rev) & $D$ (mm) & $F_c$ (N) & $F_r$ (N) & $T$ (N\,m) \\
+\midrule
+C1 desbaste en diámetro máximo & 1,0 & 0,20 & 150 & 500 & 200 & 37,5 \\
+C2 desbaste de mayor fuerza    & 1,5 & 0,20 & 80  & 750 & 300 & 30,0 \\
+C3 acabado                     & 0,2 & 0,10 & 150 & 50  & 20  & 3,8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El par máximo requerido (37,5\,N\,m) es inferior al disponible en la barra (49\,N\,m), lo que confirma la selección del motor de 0,75\,kW.
+
+\subsection{Verificación analítica de la barra}
+La barra se modeló como una viga simplemente apoyada de luz $L = 600$\,mm, con la herramienta a $a = 50$\,mm del soporte más cercano, que es la posición habitual en el mandrinado lineal. La flecha bajo la carga es \cite{fea-Budynas2019}:
+\begin{equation}
+\delta = \frac{F\,a^2\,b^2}{3\,E\,I\,L}, \qquad I = \frac{\pi d^4}{64}
+\end{equation}
+Para el caso C2 ($F = 808$\,N, resultante de $F_c$ y $F_r$) se obtiene $\delta = 22{,}5$\,\textmu m y una tensión de von Mises de 10,7\,MPa, frente a un límite de fluencia de 655\,MPa. La barra está lejos de la fluencia, de modo que el criterio que gobierna su diseño es la rigidez. En acabado (C3) la flecha es de 1,5\,\textmu m, muy inferior a la tolerancia IT7 de un alojamiento de Ø100\,mm (35\,\textmu m) \cite{busqext-ISO286-1}. Si la herramienta trabaja en el centro de la luz, la flecha en desbaste asciende a 160\,\textmu m, por lo que en esa zona solo deben darse pasadas de acabado.
+
+\subsection{Estudio 1: placa portarrodamiento del lado motriz (pieza crítica)}
+La placa del lado motriz es la pieza más solicitada, porque recibe la reacción del corte, el peso del módulo de transmisión en voladizo y el par de reacción del motor. Se aplicó un factor de servicio de 2 por arranques, vibraciones e impacto de la cuchilla.
+
+\begin{itemize}
+    \item \textbf{Material:} aluminio 6061-T6 ($S_y = 275$\,MPa).
+    \item \textbf{Sujeciones:} geometría fija en las caras de apoyo de los pernos sobre los patines.
+    \item \textbf{Cargas:} carga de rodamiento radial de 1272\,N y axial de 300\,N en el alojamiento de la rótula; momento de 51\,N\,m y par de 99\,N\,m como carga remota en el centro del alojamiento.
+    \item \textbf{Malla:} sólida basada en curvatura, con control de malla de 2\,mm en las ranuras y en el alojamiento.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\figpendiente{tensión de von Mises en la placa portarrodamiento}
+\caption{Tensión de von Mises en la placa portarrodamiento del lado motriz. Fuente: Elaboración propia.}
+\label{fig:fea1-vm}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\figpendiente{desplazamiento resultante en la placa portarrodamiento}
+\caption{Desplazamiento resultante en la placa portarrodamiento del lado motriz. Fuente: Elaboración propia.}
+\label{fig:fea1-u}
+\end{figure}
+
+\textbf{Interpretación:} la tensión máxima es de [XX]\,MPa y se concentra en [XX]; el factor de seguridad mínimo es de [XX] y el desplazamiento del alojamiento es de [XX]\,\textmu m, frente al límite de 20\,\textmu m. % COMPLETAR con los resultados.
+
+\subsection{Estudio 2: barra de mandrinar (pieza representativa)}
+La barra es la pieza que define la precisión del mecanizado. Se analizó la configuración L800 apoyada en las zonas de los bujes, con la carga del caso C2 aplicada a 50\,mm de un soporte y el par correspondiente; el estudio se repitió con la carga en el centro de la luz.
+
+\begin{figure}[H]
+\centering
+\figpendiente{desplazamiento de la barra con la carga junto al soporte y en el centro de la luz}
+\caption{Desplazamiento de la barra de mandrinar. Fuente: Elaboración propia.}
+\label{fig:fea2-u}
+\end{figure}
+
+\textbf{Validación:} la flecha obtenida por elementos finitos es de [XX]\,\textmu m junto al soporte y de [XX]\,\textmu m en el centro, frente a 22,5 y 160\,\textmu m del cálculo analítico, con una diferencia de [XX]\,\%. % Si la diferencia es menor al 10 %, el modelo queda validado.
+\begin{table}[H]
+\centering
+\small
+\caption{Comparación entre el cálculo analítico y el FEA de la barra. Fuente: Elaboración propia.}
+\label{tab:fea-validacion}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Posición de la carga} & \textbf{Analítico (\textmu m)} & \textbf{FEA (\textmu m)} & \textbf{Diferencia (\%)} \\
+\midrule
+A 50\,mm del soporte & 22,5 & [XX] & [XX] \\
+Centro de la luz     & 160  & [XX] & [XX] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Verificaciones complementarias}
+El cordón de los patines (filete de 6\,mm y 440\,mm de longitud) soporta un esfuerzo medio de 0,7\,MPa con las cargas de diseño, muy inferior al admisible del electrodo E70XX, por lo que la fijación por soldadura no limita el diseño. El husillo de avance requiere 0,64\,N\,m para el empuje de diseño, la mitad del par del motor paso a paso.

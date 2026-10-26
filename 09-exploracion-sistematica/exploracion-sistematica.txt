@@ -108,7 +108,7 @@ A continuación se analizan las soluciones descartadas (resaltadas en rojo en lo
 
 
 \subsection{Tabla de combinación de conceptos}
-La Tabla~\ref{tab:opciones_viables_traspuesta} reúne las opciones que superaron el descarte en cada subfunción; con ellas se arman los conceptos integrados de la Sección~\ref{sec:filtrado}.
+La Tabla~\ref{tab:opciones_viables_traspuesta} reúne las opciones que superaron el descarte en cada subfunción. Con dos opciones en las dos primeras subfunciones y tres en las restantes, el espacio de diseño admite $2 \times 2 \times 3 \times 3 \times 3 = 108$ combinaciones teóricas.
 
 \begin{table}[H]
     \centering
@@ -171,3 +171,22 @@ La Tabla~\ref{tab:opciones_viables_traspuesta} reúne las opciones que superaron
         \bottomrule
     \end{tabularx}
 \end{table}
+
+\subsection{Combinación general y selección de conceptos}
+\label{sec:combinacion-general}
+Evaluar las 108 combinaciones no es práctico ni necesario, porque muchas de ellas son incompatibles o redundantes. La selección de los conceptos que pasan a la matriz de filtrado se realizó con tres reglas explícitas:
+\begin{enumerate}
+    \item \textbf{Compatibilidad entre subfunciones.} Se descartan las combinaciones cuyos elementos no pueden coexistir; por ejemplo, el alimentador de alambre montado sobre la máquina exige una base que soporte su masa adicional y un control capaz de coordinar el arrastre del alambre, lo que excluye su uso con el microcontrolador de bajo costo.
+    \item \textbf{Un concepto por prioridad de diseño.} Cada concepto se orienta a una de las prioridades derivadas de las necesidades (Tabla~\ref{tab:necesidades}): rigidez y capacidad de carga (Modelo A), portabilidad y costo (Modelo B), repetibilidad mediante automatización (Modelo C) y un compromiso entre rigidez y control digital (Modelo D).
+    \item \textbf{Cobertura del espacio de soluciones.} Entre los cuatro conceptos, cada opción viable de la Tabla~\ref{tab:opciones_viables_traspuesta} aparece al menos una vez, de modo que ninguna alternativa queda sin evaluar en el filtrado.
+\end{enumerate}
+
+La Figura~\ref{fig:combinacion-general} representa gráficamente la tabla de combinación general: cada línea recorre la opción elegida en cada subfunción y define un concepto completo. Se incluye también el Modelo AD, que resulta de la recombinación descrita en la Sección~\ref{sec:filtrado}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{09-exploracion-sistematica/recursos/tabla-combinacion-general.png}
+    \caption{Tabla de combinación general de conceptos; cada trayectoria une la opción seleccionada en cada subfunción. Fuente: Elaboración propia.}
+    \label{fig:combinacion-general}
+\end{figure}
+

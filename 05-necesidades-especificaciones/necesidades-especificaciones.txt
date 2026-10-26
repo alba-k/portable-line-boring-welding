@@ -70,7 +70,7 @@ En la interfaz energética, el equipo se acoplará a la infraestructura existent
 \label{fig:enc-proceso}
 \end{figure}
 
-La Tabla~\ref{tab:especificaciones} define las metas cuantitativas finales del diseño. Los parámetros restrictivos (masa $<35$\,kg y tiempo de acople $<30$\,min) se validarán mediante simulaciones en el entorno CAD/CAE y pruebas en el prototipo funcional.
+La Tabla~\ref{tab:especificaciones} define las metas cuantitativas finales del diseño. Los parámetros restrictivos (masa de la máquina montada $\leq 35$\,kg y tiempo de acople $<30$\,min) se validarán mediante simulaciones en el entorno CAD/CAE y pruebas en el prototipo funcional.
 
 \begin{table}[H]
 \centering
@@ -84,12 +84,15 @@ La Tabla~\ref{tab:especificaciones} define las metas cuantitativas finales del d
 Rango de diámetro interior a reconstruir & 30 -- 150 & mm & P3: 6 de 8 técnicos \\
 Longitud entre centros (ojo a ojo) & 100 -- 600 & mm & P4: 7 de 8 técnicos hasta 600\,mm \\
 Longitud máxima de rellenado continuo & Hasta 60 & mm & P5: 7 de 8 técnicos \\
-Masa total transportable por 1 persona & $< 35$ & kg & Criterio de diseño \\
+Masa de la máquina montada (configuración de referencia) & $\leq 35$ & kg & Criterio de diseño \\
+Masa del módulo más pesado (transporte por 1 persona) & $\leq 15$ & kg & Criterio de diseño \\
 Tiempo de preparación, alineación y acople & $< 30$ & min & Criterio de diseño \\
 % POR REVISAR: la Tabla de necesidades dice 7 de 8 (87,5 %) usan 220 V; aquí dice 6 de 8. Unificar con los datos de la encuesta.
 Alimentación eléctrica compatible & 220 / 380 & V & P8: 6 de 8 técnicos; 2 de 8 usan generador portátil \\
 Proceso de soldadura compatible & GTAW (GMAW opcional) & -- & P7: GTAW en 5 de 8, GMAW en 2 de 8 \\
 Velocidad de avance lineal paramétrica & 1 -- 5 & mm/rev & Criterio de diseño \\
+Velocidad de giro de la barra en mandrinado & 10 -- 190 & rpm & Ec. de $n$ (Sección~7), Ø30--150\,mm \\
+Velocidad de giro de la barra en recargue & 0,3 -- 3,2 & rpm & Velocidad de soldeo 150--300\,mm/min \\
 \bottomrule
 \end{tabular}
 \end{table}

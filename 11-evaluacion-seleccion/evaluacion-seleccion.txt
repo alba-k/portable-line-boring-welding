@@ -1,52 +1,63 @@
 \section{Evaluación y selección de conceptos}
 
-\subsection{Ponderación de criterios}
-Con el propósito de realizar una evaluación cuantitativa objetiva de las alternativas conceptuales, se establece un esquema de ponderación para los criterios de diseño cuya suma total equivale al 100\%. Debido a que no todos los requerimientos presentan la misma relevancia técnica y funcional en el desempeño global del equipo, la asignación de pesos refleja la jerarquía de prioridades del proyecto. La portabilidad recibe el mayor peso (35\,\%), porque el 83,3\,\% de los operadores encuestados prefiere un equipo portátil (Tabla~\ref{tab:necesidades}). Le sigue la precisión del recargue (25\,\%), que es el objetivo técnico central del proyecto; luego la facilidad de manejo y la durabilidad (15\,\% cada una) y, por último, la facilidad de manufactura (10\,\%).
+\subsection{Ponderación de criterios a partir de las necesidades}
+Los pesos de los criterios se obtienen de la importancia de las necesidades del cliente, siguiendo el procedimiento de la matriz de evaluación de conceptos \cite{intro-Ulrich2013}. A cada criterio se le asigna una importancia de 1 a 5 según la evidencia disponible: la frecuencia con que la necesidad aparece en la encuesta (Tabla~\ref{tab:necesidades}) o, cuando la encuesta no la mide directamente, su relación con el problema y los objetivos del proyecto. El peso de cada criterio es su importancia dividida entre la suma de importancias (Tabla~\ref{tab:pesos}).
+
 \begin{table}[H]
 \centering
-\caption{Ponderación de criterios de selección}
+\small
+\caption{Derivación de los pesos de los criterios a partir de las necesidades del cliente. Fuente: Elaboración propia.}
 \label{tab:pesos}
-\begin{tabular}{@{}lc@{}}
+\begin{tabular}{@{} p{0.20\textwidth} p{0.50\textwidth} c c @{}}
 \toprule
-\textbf{Criterio} & \textbf{Peso} \\
+\textbf{Criterio} & \textbf{Necesidad y evidencia} & \textbf{Importancia} & \textbf{Peso} \\
 \midrule
-Facilidad de manejo      & 15\,\% \\
-Precisión del recargue   & 25\,\% \\
-Durabilidad              & 15\,\% \\
-Facilidad de manufactura & 10\,\% \\
-Portabilidad             & 35\,\% \\
+Precisión del recargue & Aporte térmico uniforme y diámetro final repetible; es el problema central (Sección~3) y el objetivo general del proyecto. & 5 & 25\,\% \\
+\addlinespace
+Portabilidad & Equipo portátil o de capacidad dual: 5 de 6 operadores (83,3\,\%). & 5 & 25\,\% \\
+\addlinespace
+Facilidad de manejo & Reducir paradas de 1 a 4 días (6 de 6 operadores, 100\,\%) y la fatiga del operario (4 de 6, 66,6\,\%); montaje en menos de 30\,min. & 4 & 20\,\% \\
+\addlinespace
+Durabilidad & Operación en campo con vibración y calor del arco; requisito de diseño, sin pregunta directa en la encuesta. & 3 & 15\,\% \\
+\addlinespace
+Facilidad de manufactura & Fabricación local frente a equipos importados de alto costo (Sección~7); requisito de diseño. & 3 & 15\,\% \\
 \midrule
-\textbf{Total}           & 100\% \\
+\textbf{Total} & & 20 & 100\,\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+% NOTA (Claude): en P1 la portabilidad pesaba 35 % y la precisión 25 %, sin vínculo explícito con las necesidades.
+% El docente calificó la evaluación con 5/10 ("los pesos en las necesidades no son los indicados").
+
 \subsection{Matriz de evaluación de conceptos}
-Con los pesos definidos se elabora la matriz de evaluación ponderada, que compara el concepto que pasó el filtrado (B) con el concepto recombinado (AD). Cada alternativa se califica de 1 a 5 en cada criterio, y la calificación se multiplica por el peso correspondiente. La suma da una puntuación global que refleja el cumplimiento del concepto frente a las prioridades del proyecto.
+Con los pesos definidos se elabora la matriz de evaluación ponderada, que compara el concepto que superó el filtrado (B) con el concepto recombinado (AD). Cada alternativa se califica de 1 a 5 en cada criterio, y la calificación se multiplica por el peso correspondiente; la suma da la puntuación global.
+
 \begin{table}[H]
 \centering
-\caption{Matriz de evaluación de conceptos}
+\caption{Matriz de evaluación de conceptos. Fuente: Elaboración propia.}
 \label{tab:evaluacion}
-\resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 & \multicolumn{2}{c}{\textbf{Concepto B}} & \multicolumn{2}{c}{\textbf{Concepto AD}} \\
 \textbf{Criterio (peso)} & Calif. & Ponderada & Calif. & Ponderada \\
 \midrule
-Facilidad de manejo (15\,\%)     &4 &0,60 &4 &0,60\\
-Precisión del recargue (25\,\%)  &3 &0,75 &5 &1,25\\
-Durabilidad (15\,\%)             &2 &0,30 &5 &0,75\\
-Facilidad de manufactura (10\,\%)&4 &0,40 &4 &0,40\\
-Portabilidad (35\,\%)            &5 &1,75 &3 &1,05\\
+Precisión del recargue (25\,\%)   &3 &0,75 &5 &1,25\\
+Portabilidad (25\,\%)             &5 &1,25 &3 &0,75\\
+Facilidad de manejo (20\,\%)      &4 &0,80 &4 &0,80\\
+Durabilidad (15\,\%)              &2 &0,30 &5 &0,75\\
+Facilidad de manufactura (15\,\%) &4 &0,60 &4 &0,60\\
 \midrule
-\textbf{Total} & & 3,80 & & 4,05 \\
+\textbf{Total} & & 3,70 & & 4,15 \\
 \textbf{Lugar} & & 2.\textsuperscript{o} & & 1.\textsuperscript{o} \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
 \end{table}
 
-\subsection{Selección del concepto final}
+Las calificaciones se justifican así. En precisión, el Concepto AD fija la barra sobre soportes rígidos y coordina rotación y avance con PLC y encoder, mientras que la base magnética del Concepto B puede desplazarse por la vibración y el calor, que además reduce la fuerza de adherencia del imán. En portabilidad, el Concepto B se monta sin soldar; el AD requiere puntear patines de acero en la pieza, aunque la fuente de soldadura ya está en el sitio para el recargue y los patines son consumibles de baja masa. En durabilidad, el bloque ranurado y el microcontrolador del Concepto B son más vulnerables a la vibración y al ambiente de taller que la brida rígida y el PLC industrial del AD.
 
-Como resultado de la evaluación ponderada, el \textbf{Modelo AD (recombinado)} es el concepto ganador, con \textbf{4,05 sobre 5,00} frente a 3,80 del Modelo B. Aunque el Modelo B obtiene más puntos en portabilidad (1,75 frente a 1,05), el Modelo AD lo supera en precisión del recargue (1,25 frente a 0,75) y en durabilidad (0,75 frente a 0,30), que en conjunto pesan más en el resultado. La integración de la fijación por soldadura en la base, la brida rígida con pernos axiales y el control digital mediante PLC con HMI táctil garantiza un desempeño superior en estabilidad geométrica, rigidez frente a vibraciones y repetibilidad operacional, convirtiendo al \textbf{Modelo AD} en el concepto definitivo seleccionado para la fase de diseño detallado y prototipado.
-% POR REVISAR (ver MEJORAS.md): el Modelo AD usa fijación por soldadura y aun así recibe 3 en portabilidad.
+\subsection{Análisis de sensibilidad}
+Para comprobar que la selección no depende de la ponderación elegida, se recalculó la matriz con los pesos utilizados en la primera versión del estudio (portabilidad 35\,\%, precisión 25\,\%, manejo 15\,\%, durabilidad 15\,\% y manufactura 10\,\%). El Concepto AD también resulta ganador (4,05 frente a 3,80). El Concepto B solo superaría al AD si la portabilidad pesara más del 39\,\% \emph{con los demás pesos en proporción}, un valor que no se corresponde con las necesidades relevadas.
+
+\subsection{Selección del concepto final}
+Como resultado de la evaluación ponderada, el \textbf{Modelo AD (recombinado)} es el concepto seleccionado, con \textbf{4,15 sobre 5,00} frente a 3,70 del Modelo B. Su ventaja en precisión del recargue (1,25 frente a 0,75) y en durabilidad (0,75 frente a 0,30) compensa la menor portabilidad (0,75 frente a 1,25). La fijación mediante patines soldables, la brida rígida con pernos axiales y el control por PLC con HMI aportan la estabilidad geométrica, la rigidez frente a vibraciones y la repetibilidad que exige el problema. El Modelo AD pasa a la fase de diseño de detalle, modelado CAD y análisis por elementos finitos.

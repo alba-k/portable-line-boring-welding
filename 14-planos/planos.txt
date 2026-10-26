@@ -1,2 +1,57 @@
 \section{Planos}
-% PENDIENTE: esta sección no existía en el informe anterior.
+\label{sec:planos}
+% BORRADOR (26-10-2026, Claude): estructura, normas y lista de planos. Faltan los planos de SolidWorks (actividades 6.2 y 6.3).
+
+Los planos de fabricación se elaboraron en SolidWorks a partir del modelo paramétrico, con una plantilla de formato y un cuadro de rotulación (carimbo) propios del equipo. Se aplicaron las normas de la Tabla~\ref{tab:normas-planos}.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Normas aplicadas en los planos. Fuente: Elaboración propia.}
+\label{tab:normas-planos}
+\begin{tabular}{@{} p{0.26\textwidth} p{0.64\textwidth} @{}}
+\toprule
+\textbf{Norma} & \textbf{Aplicación} \\
+\midrule
+ISO 5457 \cite{planos-ISO5457} & Formatos de hoja (A3 para piezas, A2 para ensamble) y márgenes \\
+ISO 7200 \cite{planos-ISO7200} & Campos del cuadro de rotulación \\
+ISO 128 \cite{planos-ISO128-1} & Representación de vistas, cortes y tipos de línea; método del primer diedro \\
+ISO 129-1 \cite{planos-ISO129-1} & Acotación \\
+ISO 286-1 \cite{busqext-ISO286-1} & Ajustes y tolerancias (H7/h6 en la barra, H7/p6 en el buje) \\
+ISO 1101 \cite{planos-ISO1101} & Tolerancias geométricas (concentricidad del alojamiento de la rótula, perpendicularidad de los centradores) \\
+ISO 21920-1 \cite{planos-ISO21920} & Indicación de la rugosidad superficial \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cuadro de rotulación}
+El carimbo contiene el nombre de la universidad y de la carrera, el título del proyecto, el nombre y el número de la pieza, el material, la masa, la escala, el método de proyección, el formato, la fecha, los nombres de quien dibujó y quien revisó, y el número de hoja. % FIGURA PENDIENTE: captura del carimbo personalizado (actividad 6.1).
+
+\subsection{Lista de planos}
+\begin{table}[H]
+\centering
+\small
+\caption{Planos de fabricación y de ensamble. Fuente: Elaboración propia.}
+\label{tab:lista-planos}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{N.\textdegree} & \textbf{Plano} & \textbf{Formato} & \textbf{Escala} \\
+\midrule
+MP-00 & Ensamble general con lista de materiales & A2 & 1:5 \\
+MP-01 & Vista explosionada & A2 & 1:5 \\
+MP-A1 & Patín soldable & A4 & 1:1 \\
+MP-A2 & Placa portarrodamiento (tabla de configuraciones) & A3 & 1:2 \\
+MP-A4 & Buje de bronce & A4 & 2:1 \\
+MP-B1 & Barra de mandrinar (tabla de configuraciones) & A3 & 1:5 \\
+MP-B2 & Collar con brida & A4 & 1:1 \\
+MP-B3 & Bloque portacuchilla & A4 & 1:1 \\
+MP-C6 & Manguito de arrastre & A4 & 1:1 \\
+MP-C8 & Carcasa de transmisión & A3 & 1:2 \\
+MP-D1 & Placa base de avance & A3 & 1:2 \\
+MP-D7 & Carro de avance & A4 & 1:1 \\
+MP-E1 & Porta-antorcha & A4 & 1:1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Los planos completos se incluyen en el Anexo. % PENDIENTE: anexar los PDF de SolidWorks.

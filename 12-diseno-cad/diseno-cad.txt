@@ -1,2 +1,151 @@
 \section{Diseño CAD}
-% PENDIENTE: esta sección no existía en el informe anterior.
+\label{sec:cad}
+% BORRADOR (26-10-2026, Claude): texto basado en diseno-detalle/ESPECIFICACION-MODULOS.md.
+% Reemplazar cada \figpendiente{...} por la captura de SolidWorks correspondiente y ajustar las cotas si cambian en el modelo.
+\providecommand{\figpendiente}[1]{\fbox{\parbox[c][3.5cm][c]{0.8\textwidth}{\centering\textit{Figura pendiente: #1}}}}
+
+El concepto AD se desarrolló como prototipo virtual en SolidWorks. El modelo se organizó en cinco módulos que se pueden transportar por separado y se montan sobre la pieza de trabajo: (A) soportes y fijación, (B) barra y cabezal portaherramienta, (C) transmisión, (D) avance axial y (E) conducción del material de soldadura y control. La Tabla~\ref{tab:modulos} relaciona cada módulo con la subfunción que resuelve y con la alternativa seleccionada en el diseño conceptual.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Correspondencia entre subfunciones, concepto AD y módulos del diseño. Fuente: Elaboración propia.}
+\label{tab:modulos}
+\begin{tabular}{@{} p{0.24\textwidth} p{0.30\textwidth} p{0.38\textwidth} @{}}
+\toprule
+\textbf{Subfunción} & \textbf{Alternativa del concepto AD} & \textbf{Módulo y solución de detalle} \\
+\midrule
+Acoplar la pieza & Fijación temporal por soldadura & A: placas portarrodamiento atornilladas a patines de acero punteados sobre la pieza \\
+Transformar y transmitir energía & Motor AC con correa dentada & C: motor de 0,75\,kW, reductor sinfín $i=10$ y correa HTD 5M 24/36 \\
+Sujetar la herramienta & Brida rígida con pernos axiales & B: collar con centrador Ø50\,h7 y 4 pernos M6 que recibe la cuchilla o la antorcha \\
+Transportar material & Cable-manguera (\textit{conduit}) & E: antorcha TIG con cable-manguera y colector rotativo \\
+Controlar velocidad y alcance & PLC con HMI táctil & D y E: avance por husillo y motor paso a paso; gabinete con PLC, HMI y variador \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Arquitectura del sistema}
+La barra de mandrinar gira y avanza a través de dos soportes autoalineables situados junto a cada oreja del alojamiento. La rotación entra por el lado motriz mediante un manguito con chaveta, dentro del cual la barra se desliza gracias a un chavetero longitudinal; el avance lo impone el carro del módulo D en el extremo opuesto. La cuchilla y la antorcha se montan sobre la misma brida del collar, de modo que el cambio de operación no exige desmontar la barra ni repetir el centrado (Figura~\ref{fig:arquitectura}).
+
+\begin{figure}[H]
+\centering
+\figpendiente{ensamble general sobre una oreja de prueba, con los módulos A a E señalados}
+\caption{Arquitectura general de la mandriladora portátil. Fuente: Elaboración propia.}
+\label{fig:arquitectura}
+\end{figure}
+
+Los parámetros de operación que fijan el dimensionamiento se obtuvieron de las especificaciones (Tabla~\ref{tab:especificaciones}) y de los casos de carga de la Sección~\ref{sec:fea}: velocidad de la barra de 10 a 193\,rpm para mandrinar, par disponible de 49\,N\,m, avance de 0,05 a 0,3\,mm/rev en mandrinado y de 1 a 5\,mm/rev en recargue, y una carrera axial de 150\,mm.
+
+\subsection{Desarrollo de piezas por módulo}
+
+\subsubsection{Módulo A: soportes y fijación}
+Cada soporte consta de cuatro patines de acero ASTM A36 de $60\times40\times12$\,mm, que se puntean con soldadura a la cara de la oreja, y de una placa portarrodamiento de aluminio 6061-T6 de 15\,mm de espesor que se atornilla a ellos. Las ranuras de la placa permiten desplazarla $\pm10$\,mm para centrar la barra con el eje del alojamiento. En el centro de la placa se aloja una rótula SKF GE~45~ES, que absorbe la desalineación angular entre ambos soportes, y dentro de ella un buje de bronce SAE~660 en el que la barra gira y se desliza (Figura~\ref{fig:modulo-a}).
+
+La fijación por soldadura se aplica a los patines y no a la máquina: los patines son consumibles de 0,22\,kg que se retiran con amoladora al terminar, y la fuente de soldadura ya se encuentra en el sitio para el recargue. Así se conserva la rigidez que motivó la selección del concepto AD sin comprometer la portabilidad del equipo.
+
+\begin{figure}[H]
+\centering
+\figpendiente{patín soldable, placa portarrodamiento (configuraciones P180 y P240), rótula y buje}
+\caption{Piezas del módulo A. Fuente: Elaboración propia.}
+\label{fig:modulo-a}
+\end{figure}
+
+\subsubsection{Módulo B: barra y cabezal portaherramienta}
+La barra es de acero AISI 4140 bonificado, de Ø35\,h6, con un chavetero longitudinal de $10\times5$\,mm y agujeros transversales de $12\times12$\,mm cada 100\,mm para colocar la cuchilla directamente en alojamientos de Ø45 a 80\,mm. Para diámetros mayores se monta el collar partido de acero AISI 1045, cuya cara frontal tiene un centrador Ø50\,h7 y cuatro roscas M6: sobre ella se fija el bloque portacuchilla, con ajuste radial fino, o el porta-antorcha del módulo E (Figura~\ref{fig:modulo-b}). Esta interfaz común materializa la brida rígida con pernos axiales seleccionada en el diseño conceptual.
+
+\begin{figure}[H]
+\centering
+\figpendiente{barra (configuraciones L500, L800 y L1000), collar con brida y bloque portacuchilla}
+\caption{Piezas del módulo B. Fuente: Elaboración propia.}
+\label{fig:modulo-b}
+\end{figure}
+
+\subsubsection{Módulo C: transmisión}
+Un motor trifásico de 0,75\,kW y 1450\,rpm, alimentado por un variador con entrada monofásica de 220\,V, acciona un reductor sinfín-corona NMRV040 de relación 10. Una correa dentada HTD 5M con poleas de 24 y 36 dientes transmite el giro al manguito de arrastre, apoyado en dos rodamientos 6009 dentro de una carcasa de aluminio que se une a la placa portarrodamiento mediante un centrador Ø110\,h7 y cuatro pernos axiales M8 (Figura~\ref{fig:modulo-c}). La correa aísla al eje de las vibraciones del motor, que fue la razón de su selección.
+
+El recargue requiere girar la barra entre 0,3 y 3,2\,rpm, casi cien veces más lento que el mandrinado, un rango que el variador por sí solo no cubre. Por ello el módulo C tiene una segunda configuración, en la que el motor y el reductor se sustituyen por un motor paso a paso NEMA~23 con reductor planetario 1:20 sobre la misma carcasa. En el diseño conceptual el motor paso a paso se descartó por su par insuficiente para el corte; en el recargue solo debe vencer la fricción de los bujes, del orden de 3\,N\,m, frente a los 22\,N\,m que entrega. La solución coincide con la de los equipos comerciales, que emplean una unidad de baja velocidad para soldar \cite{busqext-ClimaxBW3000}.
+
+\begin{figure}[H]
+\centering
+\figpendiente{módulo de transmisión con la guarda transparente; configuraciones de mandrinado y de recargue}
+\caption{Módulo C de transmisión. Fuente: Elaboración propia.}
+\label{fig:modulo-c}
+\end{figure}
+
+\subsubsection{Módulo D: avance axial}
+El carro de avance, de aluminio 6061-T6, sujeta el extremo de la barra mediante un rodamiento radial 6006 y dos axiales 51106, de modo que la barra gira libremente mientras el carro la empuja o la retira. El carro se desliza sobre dos ejes de Ø12\,mm con rodamientos lineales LM12UU y lo mueve un husillo trapecial Tr16$\times$4 accionado por un motor paso a paso NEMA~23 (Figura~\ref{fig:modulo-d}). Con el empuje de diseño de 350\,N el husillo requiere 0,64\,N\,m, la mitad del par del motor. Tres sensores inductivos marcan los finales de carrera y la posición de referencia, y el PLC sincroniza el avance con la rotación a partir de un encoder de 1000 pulsos por vuelta.
+
+\begin{figure}[H]
+\centering
+\figpendiente{módulo de avance axial con el carro en ambos extremos de la carrera}
+\caption{Módulo D de avance axial. Fuente: Elaboración propia.}
+\label{fig:modulo-d}
+\end{figure}
+
+\subsubsection{Módulo E: conducción del material de soldadura y control}
+El porta-antorcha comparte la interfaz del bloque portacuchilla y sujeta una antorcha TIG WP-17 de 150\,A, con ajuste radial de la distancia al alojamiento y giro de $\pm15^\circ$. La corriente y el gas llegan por el cable-manguera y atraviesan un colector rotativo que evita la torsión de las líneas al girar la barra \cite{busqext-ClimaxBoreWelding}. El gabinete de control, separado de la máquina, contiene el PLC S7-1200, la HMI táctil, el variador, los controladores de los motores paso a paso, la parada de emergencia y el relé que habilita el arco de la fuente TIG solo cuando la barra está girando.
+
+% PENDIENTE: figura del porta-antorcha y del gabinete cuando estén modelados (actividad 3.5).
+
+\subsection{Materiales y apariencia}
+La Tabla~\ref{tab:materiales} resume los materiales asignados en SolidWorks. Se empleó aluminio 6061-T6 en las placas y carcasas para reducir la masa, y acero en las piezas sometidas a desgaste o a esfuerzos de contacto. Los colores identifican la función: azul para las piezas estructurales propias, amarillo para las guardas de seguridad y los colores del fabricante para los componentes comerciales.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Materiales de las piezas fabricadas. Fuente: Elaboración propia.}
+\label{tab:materiales}
+\begin{tabular}{@{} p{0.40\textwidth} p{0.28\textwidth} p{0.22\textwidth} @{}}
+\toprule
+\textbf{Pieza} & \textbf{Material} & \textbf{Justificación} \\
+\midrule
+Placas portarrodamiento, carcasa, carro, porta-antorcha & Aluminio 6061-T6 & Baja masa, mecanizable \\
+Barra de mandrinar & AISI 4140 bonificado & Rigidez y resistencia al desgaste \\
+Collar, manguito de arrastre & AISI 1045 & Resistencia y bajo costo \\
+Patines soldables & ASTM A36 & Soldabilidad \\
+Buje deslizante & Bronce SAE 660 & Bajo coeficiente de fricción \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Configuraciones paramétricas}
+Para cubrir el rango de alojamientos especificado sin multiplicar el número de piezas, se definieron configuraciones mediante tablas de diseño (Tabla~\ref{tab:configuraciones}).
+
+\begin{table}[H]
+\centering
+\small
+\caption{Configuraciones de las piezas principales. Fuente: Elaboración propia.}
+\label{tab:configuraciones}
+\begin{tabular}{@{} p{0.26\textwidth} p{0.30\textwidth} p{0.34\textwidth} @{}}
+\toprule
+\textbf{Pieza} & \textbf{Configuraciones} & \textbf{Parámetro que varía} \\
+\midrule
+Barra de mandrinar & L500, L800, L1000; familia Ø25 & Longitud según la luz (100--600\,mm); diámetro para alojamientos de Ø30--45\,mm \\
+Placa portarrodamiento & P180, P240 & Tamaño de placa y radio de ranuras (alojamientos hasta Ø90 o Ø150\,mm) \\
+Bloque portacuchilla & R80-115, R115-150 & Alcance radial de la cuchilla \\
+Porta-antorcha & 80-115, 115-150 & Distancia radial de la antorcha \\
+Módulo C & Mandrinado, Recargue & Motor AC con reductor o motor paso a paso con planetario \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Ensamble}
+El ensamble se construyó con relaciones de posición que reproducen el funcionamiento real: la barra queda concéntrica con los bujes y libre en dirección axial, las poleas se vinculan con una relación de correa, y el carro de avance con una relación de tornillo de paso 4\,mm. De este modo, el modelo reproduce simultáneamente la rotación y el avance de la herramienta, y permite verificar las interferencias en todo el recorrido (Figura~\ref{fig:explosionada}).
+
+\begin{figure}[H]
+\centering
+\figpendiente{vista explosionada del ensamble}
+\caption{Vista explosionada de la mandriladora portátil. Fuente: Elaboración propia.}
+\label{fig:explosionada}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\figpendiente{secuencia de posiciones: mandrinado de desbaste, cambio a antorcha y recargue}
+\caption{Ensamble en distintas posiciones de trabajo. Fuente: Elaboración propia.}
+\label{fig:posiciones}
+\end{figure}
+
+\subsection{Masa del conjunto}
+La masa estimada de la máquina montada es de 34,8\,kg con la barra L800 y de 36,3\,kg con la barra L1000; el módulo más pesado es el de transmisión, con 14,8\,kg. El gabinete de control (6,8\,kg) y la antorcha se transportan por separado. % ACTUALIZAR con Propiedades físicas del ensamble (actividad 3.7).
+La especificación de masa se cumple en la configuración de referencia; con la barra más larga se excede en 1,3\,kg, lo que se aborda en las recomendaciones.

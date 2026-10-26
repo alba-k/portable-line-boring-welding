@@ -1,0 +1,16 @@
+parte;criterio;peso;avance;inicio;fin;seccion;falta
+Informe;Problema;5;80;2026-10-26;2026-11-05;03;Pulido de redacción.
+Informe;Objetivos;5;60;2026-10-26;2026-11-05;04;Ajustar los específicos al alcance real: CAD, FEA y planos.
+Informe;Formato;5;40;2026-10-26;2026-11-19;Todo;Revisión ortográfica, numeración de figuras y compilación final.
+Informe;Desarrollo de conceptos (5 pasos);8;70;2026-10-26;2026-11-08;05-09;Mejorar exploración sistemática (P1: 5) y conceptos (P1: 3).
+Informe;Filtrado y evaluación de conceptos;10;70;2026-10-26;2026-11-08;10-11;Justificar la portabilidad del Modelo AD y revisar los pesos de las necesidades.
+Informe;Desarrollo individual de piezas;15;0;2026-10-27;2026-11-12;12;Modelar las piezas propias con material y color y explicar su función.
+Informe;Ensamblaje del prototipo;15;0;2026-11-08;2026-11-14;12;Ensamble con imágenes en varias posiciones haciendo la tarea.
+Informe;Análisis de cargas (FEA);15;0;2026-11-12;2026-11-16;13;Análisis estático de piezas fundamentales con cargas, sujeciones e interpretación.
+Informe;Planos;10;0;2026-11-15;2026-11-17;14;Planos de piezas y ensamble con normas de clase y carimbo personalizado.
+Informe;Conclusiones;10;10;2026-11-16;2026-11-19;15;Una conclusión por objetivo, con evidencia de CAD y FEA.
+Informe;Recomendaciones;2;10;2026-11-16;2026-11-19;15;Rehacer al final.
+Práctica;Desarrollo individual de piezas;25;0;2026-10-27;2026-11-12;CAD;Piezas con croquis totalmente definidos, material y color.
+Práctica;Manejo de configuraciones;20;0;2026-11-03;2026-11-15;CAD;Configuraciones en las piezas fundamentales.
+Práctica;Ensamblaje del prototipo;25;0;2026-11-08;2026-11-14;CAD;Movimiento e interacción de las piezas y vista explosionada.
+Práctica;Análisis de cargas;30;0;2026-11-12;2026-11-16;FEA;Estudio de la pieza más representativa con cargas, sujeciones e interpretación.
